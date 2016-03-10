@@ -1,0 +1,951 @@
+//Colors
+blue          = #00a
+gold          = #8B7500
+green         = #00b200
+red           = #ff2400
+yellow        = #e19526
+
+frontColor1   = #01b0ff
+frontColor2   = #01E9FE
+frontColor3   = #00FFAA
+frontColor4   = #77dd77
+frontColor5   = #58FE01
+frontColor6   = #FFE801
+
+//General styling
+#busy-holder
+  height 100%
+  width 100%
+#busy
+  position fixed
+  text-align center
+  top 30%
+  width 100%
+  z-index 1000
+#busy .busy-icon
+  color white
+  font-size 120px
+#busy .busy-text-1
+  color white
+  font-size 50px
+#busy .busy-text-2
+  color white
+  font-size 35px
+.loading
+  background linear-gradient(bottom left, #333, #555, #777,  silver)
+.buildings
+  background url("Buildings.jpg") no-repeat center center fixed
+  -webkit-background-size cover
+  -moz-background-size cover
+  -o-background-size cover
+  background-size cover
+.building-life
+  background url("BuildingLife.jpg") no-repeat center center fixed
+  -webkit-background-size cover
+  -moz-background-size cover
+  -o-background-size cover
+  background-size cover
+.categories
+  background url("Category.jpg") no-repeat center center fixed
+  -webkit-background-size cover
+  -moz-background-size cover
+  -o-background-size cover
+  background-size cover
+.cellphones
+  background url("Cellphones.jpg") no-repeat center center fixed
+  -webkit-background-size cover
+  -moz-background-size cover
+  -o-background-size cover
+  background-size cover
+.cellphone-life
+  background url("CellphoneLife.jpg") no-repeat center center fixed
+  -webkit-background-size 70% 100%
+  -moz-background-size 70% 100%
+  -o-background-size 70% 100%
+  background-size 70% 100%
+.computers
+  background url("Computers.jpg") no-repeat center center fixed
+  -webkit-background-size cover
+  -moz-background-size cover
+  -o-background-size cover
+  background-size cover
+.computer-life
+  background url("ComputerLife.jpg") no-repeat center center fixed
+  -webkit-background-size cover
+  -moz-background-size cover
+  -o-background-size cover
+  background-size cover
+.furniture
+  background url("Furniture.jpg") no-repeat center center fixed
+  -webkit-background-size cover
+  -moz-background-size cover
+  -o-background-size cover
+  background-size cover
+.furniture-life
+  background url("FurnitureLife.jpg") no-repeat center center fixed
+  -webkit-background-size cover
+  -moz-background-size cover
+  -o-background-size cover
+  background-size cover
+.home
+  background url("Home.jpg") no-repeat center center fixed
+  -webkit-background-size cover
+  -moz-background-size cover
+  -o-background-size cover
+  background-size cover
+.locations
+  background url("Locations.jpg") no-repeat center center fixed
+  -webkit-background-size cover
+  -moz-background-size cover
+  -o-background-size cover
+  background-size cover
+.login
+  background url("Login.jpg") no-repeat center center fixed
+  -webkit-background-size cover
+  -moz-background-size cover
+  -o-background-size cover
+  background-size cover
+.machinery
+  background url("Machines.jpg") no-repeat center center fixed
+  -webkit-background-size cover
+  -moz-background-size cover
+  -o-background-size cover
+  background-size cover
+.reports
+  background url("Reports.jpg") no-repeat center center fixed
+  -webkit-background-size cover
+  -moz-background-size cover
+  -o-background-size cover
+  background-size cover
+.tools
+  background url("Tools.jpg") no-repeat center center fixed
+  -webkit-background-size cover
+  -moz-background-size cover
+  -o-background-size cover
+  background-size cover
+.tutorial
+  background url("Training.jpg") no-repeat center center fixed
+  -webkit-background-size cover
+  -moz-background-size cover
+  -o-background-size cover
+  background-size cover
+.vehicles
+  background url("Vehicles.jpg") no-repeat center center fixed
+  -webkit-background-size cover
+  -moz-background-size cover
+  -o-background-size cover
+  background-size cover
+
+body
+  background-color rgba(0,0,0,0)
+  font-family sans-serif
+
+.body-container
+  background-color rgba(255,255,255,0.75)
+  background-size cover
+  color #222
+  min-height 100vh
+  padding 1% 5%
+  text-align center
+
+.template-body
+  background-color rgba(0,0,0,0)
+  margin 40px 0 0
+
+
+//Navbar
+.navbar
+  background linear-gradient(top left, #333, #555, #777,  silver)
+  border none
+
+.nav-tabs
+  border none
+
+.navbar-brand
+  color #ccc
+  font-size 28px
+
+.navbar-brand:hover,
+.navbar-brand:focus,
+.navbar-brand:active
+  color #fff
+  text-shadow 0 0 15px #fff
+
+.nav
+  font-size 20px
+
+.nav-tabs > li > a
+  color #ccc
+
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus,
+.nav-tabs > li > a:active
+  background linear-gradient(silver, #666)
+  color #222
+
+.dropdown-toggle
+  padding-right 20px
+
+.dropdown-menu
+  background linear-gradient(top left, #333, #555, #777,  silver)
+  border none
+  border-radius 10px
+  font-size 20px
+  padding 0
+
+.dropdown-menu a
+  color #ccc
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus,
+.dropdown-menu a:active
+  color #fff
+  text-decoration none
+
+.dropdown-menu li
+  padding 5px 10px
+
+.dropdown-menu li:hover,
+.dropdown-menu li:focus,
+.dropdown-menu li:active
+  background #444
+//Navbar
+
+///General Styling
+table
+  font-size 20px
+  margin-left auto
+  margin-right auto
+
+a
+  outline 0 !important
+
+hr
+  border 0
+  height 1px
+  background-image linear-gradient(to right, white, black, white)
+
+.tooltip
+  font-size 16px
+  position fixed
+
+label
+  color #ee0000
+  font-size 16px
+  font-weight bold
+  text-align left !important
+///General Styling
+
+///Home Styling
+.home-blocks
+  margin-top 54px
+.home-blocks h4
+  font-size 16px
+  padding 10px 20px
+.tutorial-block
+  background-color #fff
+  border solid 1.5px #222
+  border-radius 0 0 25px 0
+  box-shadow 5px 5px 10px #222
+  color #000
+.tutorial-icon
+  color #000066
+  font-size 75px
+  transition all 0.3s
+.tutorial-icon:hover
+  color #00dd00
+.no-tutorial-block
+  background-color #000
+  border solid 1.5px #ddd
+  border-radius 0 0 0 25px
+  box-shadow 5px 5px 10px #222
+  color #fff
+.no-tutorial-icon
+  color #00dd00
+  font-size 75px
+  transition all 0.3s
+.no-tutorial-icon:hover
+  color #000066
+///Home Styling
+
+///Tutorial Styling
+.tutorial-text-block
+  background-color #fff
+  border solid 1.5px #222
+  box-shadow 10px 10px 20px #222
+  color #000
+  margin-top 15px
+  padding 0 10px 20px
+.tutorial-text-block h3
+  font-size 22px
+.tutorial-text-block p
+  font-size 18px
+
+.floating-menu
+  background #fff
+  border solid #00 1px
+  float left
+  left 0
+  position fixed
+  top 50px
+  z-index 3
+.floating-menu a
+  font-size 40px
+  padding 5px 0
+.floating-menu ul
+  list-style none
+  padding 0 0 0 10px
+.floating-menu li
+  margin-bottom 5px
+.floating-menu i
+  color #000
+  display inline-block
+  font-size 40px
+  margin-right 10px
+  transition-delay all0.5s
+
+.floating-menu a:hover i
+  color blue
+
+.tutorial-overview-div
+  background-color #222
+  color #fff
+  margin 0
+  padding 10px 10px 30px
+  text-align center
+  width 100%
+.tutorial-overview-div .pageHeadings
+  color #000
+  margin-bottom 20px
+.tutorial-overview-div p
+  font-size 16px
+.tutorial-overview-div .tutorial-overview-icons
+  margin-top 25px
+.tutorial-overview-div .tutorial-overview-icons .large-icons
+  font-size 80px
+  margin-bottom 5px
+.tutorial-overview-div .tutorial-overview-icons ul
+  list-style none
+  text-align left
+.tutorial-overview-div .tutorial-overview-icons p
+  display inline
+  font-size 16px
+  margin 0 10px
+
+.tutorial-start-div
+  background linear-gradient(to bottom, #222, #555)
+  color #c0c0c0
+  margin 0
+  padding 10px 10px 30px
+  text-align center
+.tutorial-start-div .pageHeadings
+  color #000
+.tutorial-start-div p
+  font-size 16px
+  margin 0 10px 5px
+
+.tutorial-asset-div
+  background linear-gradient(to bottom, #555, #999)
+  color #222
+  margin 0
+  padding 10px 10px 30px
+  text-align center
+.tutorial-asset-div .pageHeadings
+  color #000
+.tutorial-asset-div ul
+  list-style none
+.tutorial-asset-div ul > li
+  margin-bottom 10px
+  text-align left
+.tutorial-asset-div ul > li > i
+  display inline
+  font-size 20px
+  margin-right 10px
+.tutorial-asset-div ul > li > h3
+  display inline
+  font-size 16px
+
+.tutorial-asset-descriptions
+  margin-top 40px
+.tutorial-asset-descriptions i
+  color #eee
+  font-size 60px
+  text-shadow 0 0 10px #eee
+.tutorial-asset-descriptions h2
+  color  #222
+  font-size 25px
+.tutorial-asset-descriptions p
+  font-size 16px
+
+.tutorial-asset-details-div
+  background linear-gradient(to bottom, #999, #fff)
+  color #222
+  margin 0
+  padding 10px 10px 30px
+  text-align center
+.tutorial-asset-details-div .pageHeadings
+  color #000
+  margin-bottom 15px
+.tutorial-asset-details-div p
+font-size 16px
+.tutorial-asset-details-div .icons
+  margin-top 20px
+.tutorial-asset-details-div .icons i
+  font-size 60px
+  margin-bottom 10px
+
+.tutorial-space
+  background none
+  height 75vh
+
+.tutorial-asset-record-div
+  background #fff
+  color #222
+  padding 10px 10px 30px
+  text-align center
+.tutorial-asset-record-div .pageHeadings
+  color #000
+  margin-bottom 15px
+.tutorial-asset-record-div p
+  font-size 16px
+.tutorial-asset-record-div i
+  color #000066
+  font-size 80px
+  margin-bottom 10px
+  padding-top 20px
+.tutorial-asset-record-div h2
+  font-size 25px
+  font-family play
+  margin-bottom 10px
+.tutorial-asset-record-div .small-icons i
+  font-size 30px
+  padding-bottom 0
+  padding-top 25px
+
+
+.tutorial-asset-record-div .moneyIcon
+  color gold
+.tutorial-asset-record-div .moneyIcon:hover
+  color gold
+.tutorial-asset-record-div .positiveIcon
+  color green
+.tutorial-asset-record-div .positiveIcon:hover
+  color green
+.tutorial-asset-record-div .badIcon
+  color red
+.tutorial-asset-record-div .badIcon:hover
+  color red
+
+.tutorial-report-div
+  background #999
+  color #000
+  padding 15px
+  text-align center
+.tutorial-report-div h2
+  font-size 22px
+.tutorial-report-div p
+  font-size 16px
+.tutorial-report-div .csv-numbers
+  color #fff
+  font-family Play
+  font-size 60px
+  text-shadow 0 0 5px #fff
+
+.tutorial-link
+  color #c0c0c0
+  font-size 60px
+  margin-top 10px
+  transition all 0.2s ease-in
+.tutorial-link:hover
+  color #c0c0c0
+  text-shadow 0 0 10px #c0c0c0
+.tutorial-asset-link
+  color #252525
+  font-size 60px
+  margin 10px 10px 0
+  transition all 0.2s ease-in
+.tutorial-building:hover
+  color #c0c0c0
+  text-shadow 0 0 10px #c0c0c0
+.tutorial-cellphone:hover
+  color #333399
+  text-shadow 0 0 10px #333399
+.tutorial-computer:hover
+  color #37FDFC
+  text-shadow 0 0 10px #37FDFC
+.tutorial-furniture:hover
+  color #000
+  text-shadow 0 0 10px #000
+.tutorial-machinery:hover
+  color #990000
+  text-shadow 0 0 10px #990000
+.tutorial-tools:hover
+  color #32cd32
+  text-shadow 0 0 10px  #32cd32
+.tutorial-vehicle:hover
+  color #fff
+  text-shadow 0 0 10px #fff
+///Tutorial Styling
+
+/// Heading Styling
+.pageHeadings
+  background-color #fff
+  border-radius 10px
+  box-shadow 2px 2px 5px black
+  display inline-block
+  font-family Play
+  font-size 40px
+  margin 10px 0 5px
+  padding 10px
+
+.assetName
+  cursor pointer
+  display inline-block
+  font-size 30px
+  font-weight bold
+/// Styling
+
+/// Front Page Styling
+.loginButton
+  background none
+  border none
+  color black
+  margin-top 10px
+  padding 5px 8px
+  font-size 40px
+.loginButton:hover
+  box-shadow 2px 2px 5px black
+  color blue
+  position relative
+  top -1px
+/// Front Page Styling
+
+/// Table Styling
+table
+  border #000
+
+th
+  padding 15px
+
+div .dataTables_length
+  text-align left
+
+div .dataTables_length label
+  color black
+  font-size 25px
+
+div .dataTables_filter label
+  color black
+  font-size 25px
+.form-inline .form-control
+  font-size 18px
+
+.table-add-button
+  color black
+  font-size 31px
+  margin-left -640px
+  padding 0 7.5px
+  position absolute
+  z-index 1
+.table-add-button:hover
+  box-shadow 2px 2px 5px black
+  color blue
+  margin-top -1px
+.table-add-button:active
+  box-shadow none
+  margin-top 0px
+.table-category-button-1
+  color black
+  font-size 28px
+  margin-left -600px
+  margin-top 2px
+  padding 0 3px
+  position absolute
+  z-index 1
+.table-category-button-1:hover
+  box-shadow 2px 2px 5px black
+  color yellow
+  margin-top -1px
+.table-category-button-1:active
+  box-shadow none
+  margin-top 0px
+
+.table-add-button-1
+  color black
+  font-size 31px
+  margin-left -600px
+  padding 0 5px
+  position absolute
+  z-index 1
+.table-add-button-1:hover
+  box-shadow 2px 2px 5px black
+  color blue
+  margin-top -1px
+.table-add-button-1:active
+  box-shadow none
+  margin-top 0px
+
+.table-back-button-1
+  color black
+  font-size 28px
+  margin-left -640px
+  padding 0 5px
+  position absolute
+  z-index 1
+.table-back-button-1:hover
+  box-shadow 2px 2px 5px black
+  color red
+  margin-top -1px
+.table-back-button-1:active
+  box-shadow none
+  margin-top 0px
+.table-category-button-2
+  color black
+  font-size 28px
+  margin-left -560px
+  margin-top 2px
+  padding 0 3px
+  position absolute
+  z-index 1
+.table-category-button-2:hover
+  box-shadow 2px 2px 5px black
+  color yellow
+  margin-top -1px
+.table-category-button-2:active
+  box-shadow none
+  margin-top 0px
+
+.table-category-button
+  color black
+  font-size 28px
+  margin-left -640px
+  padding 0 5px
+  position absolute
+  z-index 1
+.table-category-button:hover
+  box-shadow 2px 2px 5px black
+  color yellow
+  margin-top -1px
+.table-category-button:active
+  box-shadow none
+  margin-top 0px
+
+.table-add-button-2
+  color black
+  font-size 31px
+  margin-left -445px
+  padding 0 5px
+  position absolute
+  z-index 1
+.table-add-button-2:hover
+  box-shadow 2px 2px 5px black
+  color blue
+  margin-top -1px
+.table-add-button-2:active
+  box-shadow none
+  margin-top 0px
+.table-back-button-2
+  color black
+  font-size 28px
+  margin-left -485px
+  padding 0 5px
+  position absolute
+  z-index 1
+.table-back-button-2:hover
+  box-shadow 2px 2px 5px black
+  color red
+  margin-top -1px
+.table-back-button-2:active
+  box-shadow none
+  margin-top 0px
+
+.goodIcon
+  color blue
+.goodIcon:hover
+  color darken(blue, 10)
+
+.trashIcon
+  color black
+.trashIcon:hover
+  color red
+
+.badIcon
+  color red
+.badIcon:hover
+  color darken(red, 10)
+
+.editIcon
+  color yellow
+.editIcon:hover
+  color darken(yellow, 10)
+
+.moneyIcon
+  color gold
+.moneyIcon:hover
+  color lighten(gold, 10)
+
+.positiveIcon
+  color green
+.positiveIcon:hover
+  color darken(green, 10)
+
+.maufacturing
+  font-size 30px
+
+table th
+  text-align center
+table th:hover
+  color #3399FF
+
+.tableTitles
+  margin-left 15px
+  text-align left
+
+.currency
+  float left
+  margin-left 10px
+.amount
+  margin-right 10px
+  text-align right
+
+.icon-template a
+  font-size 25px
+  margin-right 10px
+/// Table Styling
+
+///Tabular Styling
+.table-bordered
+  border 1px solid #2f2f2f !important
+
+.table-bordered th
+  border-left 1px solid #2f2f2f !important
+  border-right 1px solid #2f2f2f !important
+  font-size 22px
+  text-align left
+
+.table-bordered td
+  background-color rgba(255,255,255,0.6)
+  border 1px solid #2f2f2f !important
+  border-top 0px !important
+  text-align left
+
+.table-bordered .amount-headings
+  text-align center
+
+.table-bordered .td-words
+  padding-left 15px
+
+.table-options
+  text-align center !important
+///Tabular Styling
+
+/// Detail Pages Styling
+.detail-div
+  margin-top 15px
+
+.detail-div table
+  border 1px solid #222 !important
+  width 100%
+
+.detail-div table th
+  background rgba(200,200,200, 0.4)
+  border 1px solid #222 !important
+.detail-div table th:hover
+  color black
+
+.detail-div .centered
+  background rgba(100,100,100, 0.4)
+  text-align center
+
+.detail-amount
+  margin-right 70%
+  text-align right
+
+.detail-div td
+  background rgba(255,255,255, 0.4)
+  padding 5px 10px
+
+.detailIcons
+  font-size 40px
+  margin 5px
+  padding 4px 5px
+.detailIcons:hover
+  box-shadow 2px 2px 5px black
+  position relative
+  top -1px
+.detailIcons:active
+  box-shadow none
+  top 0px
+
+.iconDiv
+  margin 15px
+/// Detail Pages Styling
+
+/// Create Pages Styling
+.input-form
+  border-radius 40px
+  box-shadow 3px 3px 6px black
+  margin-top 15px
+  padding 20px 10px
+
+.point
+  cursor pointer
+
+.inputHeadings
+  font-size 25px
+  margin-left 30px
+  text-align left
+
+.inputFields
+  border solid 0.6px black
+  border-radius 5px
+  box-shadow 2px 2px 5px black
+  font-size 20px
+  margin 0 0 5px
+  padding 10px 25px
+  text-align left
+  width 90%
+.inputFields:hover
+  border solid 0.6px black
+  box-shadow 2px 4px 7.5px black
+  position: relative
+  top -1px
+
+.inputFields:disabled
+  background-color lightGrey
+  color lightGrey
+.inputFields:disabled:hover
+  border solid 0.6px black
+  box-shadow 1px 1px 3px black
+  position: relative
+  top 1px
+
+.inputFields:focus
+  border solid 1px blue
+  box-shadow 2px 4px 7.5px navy
+  position: relative
+  top -1px
+.inputFields:active
+  top 0px
+
+.checkInput
+  border solid 0.6px black
+  box-shadow 2px 2px 5px black
+  height auto
+  transform scale(2)
+  width auto
+.checkInput:hover
+  box-shadow 3px 3px 5px black
+  color black
+  position relative
+  outline-color black
+  top -1px
+.checkInput:active
+  top 0px
+.checkInput:focus
+  box-shadow 2px 2px 5px black
+  outline none !important
+
+.checkInputDiv
+  margin-top 25px
+
+.noCalibButton
+  color blue
+  font-size 3em
+
+.noCalibButton:hover
+  color lighten(blue, 10)
+
+.CalibButton
+  color red
+  font-size 3em
+
+.CalibButton:hover
+  color darken(red, 10)
+
+.button-row
+  margin-top 25px
+
+.saveButton
+  background none
+  border none
+  color black
+  font-size 40px
+.saveButton:hover
+  box-shadow 2px 2px 5px black
+  color blue
+  position relative
+  top -1px
+.saveButton:active
+  box-shadow none
+  top 0px
+
+.backButton
+  background none
+  border none
+  color black
+  font-size 40px
+  padding 4px
+.backButton:hover
+  box-shadow 2px 2px 5px black
+  color red
+  position relative
+  top -1px
+.backButton:active
+  box-shadow none
+  top 0px
+
+.contract
+  color blue
+  font-size 50px
+  margin 5px
+  padding 2px 5px
+.contract:hover
+  box-shadow 2px 2px 5px black
+  color darken(blue, 10)
+  position relative
+  top -1px
+.contract:active
+  box-shadow none
+  top 0px
+
+.noContract
+  color red
+  font-size 50px
+  margin 5px
+  padding 2px 5px
+.noContract:hover
+  box-shadow 2px 2px 5px black
+  color darken(red, 10)
+  position relative
+  top -1px
+.noContract:active
+  box-shadow none
+  top 0px
+/// Create Pages Styling
+
+/// Report Styling
+.report-icons
+  color #000060
+  font-size 25px
+  margin-right 10px
+.reportLinks
+  font-size 25px
+.reportLinks
+  color black
+.reportLinks:hover
+  color black
+  font-weight bold
+  text-decoration none
+
+.report-table th
+  background #fff
+  border 0.5px #000 solid !important
+.report-table td
+  padding-right 10px
+.report-table .cost
+  width 10%
+
+.report-center
+  text-align center !important
+/// Report Styling

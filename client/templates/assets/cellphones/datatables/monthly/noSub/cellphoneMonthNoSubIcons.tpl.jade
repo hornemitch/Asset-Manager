@@ -1,0 +1,10 @@
+.icon-template
+    a.goodIcon(href='{{pathFor "cellphone.monthly.sub.details"}}' data-toggle="tooltip" title="View Details")
+        i.fa.fa-eye
+    a.removeButton.trashIcon(href='#' data-toggle="tooltip" title="Delete")
+        i.fa.fa-trash
+
+script.
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });

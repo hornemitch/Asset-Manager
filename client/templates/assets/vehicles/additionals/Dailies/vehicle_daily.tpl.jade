@@ -1,0 +1,17 @@
+.template-body
+   .row
+      h1.pageHeadings Vehicle Dailies
+   .row
+      h2.assetName(data-toggle='tooltip' title='Licence Plate Number') #{licencePlate}
+   .row
+      a.table-back-button-1(href='{{pathFor "vehicles"}}' data-toggle="tooltip" title="Back to vehicles")
+         i.fa.fa-arrow-left
+      a.table-add-button-1(href='{{pathFor "vehicle.daily.add"}}' data-toggle="tooltip" title="Add Vehicle Daily")
+         i.fa.fa-plus
+   .row
+      |   {{> tabular table=TabularTables.VehicleDaily selector=selector class="table-bordered"}}
+
+script.
+   $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+   });

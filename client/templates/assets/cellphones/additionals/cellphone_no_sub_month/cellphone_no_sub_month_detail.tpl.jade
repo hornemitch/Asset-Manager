@@ -1,0 +1,25 @@
+.template-body
+   h1.pageHeadings Cell Phone Monthly Details
+   h2.assetName(data-toggle='tooltip' title='Month') #{month}
+   .row
+      .col-md-3.leftBorder
+         h2.detailHeading Total Bill
+         h4.detailBody R #{showValue totalBill}
+      .col-md-3.leftBorder
+         h2.detailHeading Airtime Costs
+         h4.detailBody R #{showValue airtimeCosts}
+      .col-md-3.leftBorder
+         h2.detailHeading Data Costs
+         h4.detailBody R #{showValue dataCosts}
+      .col-md-3
+         h2.detailHeading comment
+         h4.detailBody #{comment}
+
+   .row
+      a.backButton(href='{{pathFor "cellphone.monthly"}}' data-toggle="tooltip" title="Back to Cellphone Monthlies")
+         i.fa.fa-arrow-left
+
+script.
+   $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+   });

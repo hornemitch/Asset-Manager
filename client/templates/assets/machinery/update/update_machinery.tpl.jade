@@ -1,0 +1,88 @@
+.template-body
+    .row
+        h1.pageHeadings Update Machine
+    form.machine-edit-form.input-form
+        .row
+            .col-md-3
+                h2.inputHeadings Invoice Number
+            .col-md-3
+                h2.inputHeadings Purchase Order Number
+            .col-md-3
+                h2.inputHeadings Purchase Cost
+            .col-md-3
+                h2.inputHeadings User
+        .row
+            .col-md-3
+                input.inputFields(type='text' autocomplete='off' onclick='this.select()' name='invoiceNumber' value='#{invoiceNumber}' required)
+            .col-md-3
+                input.inputFields(type='text' autocomplete='off' onclick='this.select()' name='purchaseOrderNumber' value='#{purchaseOrderNumber}' required)
+            .col-md-3
+                input.inputFields(type='number' autocomplete='off' onclick='this.select()' name='costPrice' step='0.01' value='#{costPrice}' required)
+            .col-md-3
+                input.inputFields(type='text' autocomplete='off' onclick='this.select()' name='compUser' value='#{user}'  required)
+        .row
+            .col-md-3
+                h2.inputHeadings Supplier
+            .col-md-3
+                h2.inputHeadings Manufacturer
+            .col-md-3
+                h2.inputHeadings Model
+            .col-md-3
+                h2.inputHeadings Serial Number
+        .row
+            .col-md-3
+                input.inputFields(type='text' autocomplete='off' onclick='this.select()' name='supplier' value='#{supplier}' required)
+            .col-md-3
+                input.inputFields(type='text' autocomplete='off' onclick='this.select()' name='manufacturer' value='#{manufacturer}' required)
+            .col-md-3
+                input.inputFields(type='text' autocomplete='off' onclick='this.select()' name='model' value='#{model}' required)
+            .col-md-3
+                input.inputFields(type='text' autocomplete='off' onclick='this.select()' name='serialNumber' value='#{serialNumber}' required)
+        .row
+            .col-md-3
+                h2.inputHeadings Purchase Date
+            .col-md-3
+                h2.inputHeadings Warranty Expiration
+            .col-md-3
+                h2.inputHeadings Status
+            .col-md-3
+                h2.inputHeadings Category
+        .row
+            .col-md-3
+                input.inputFields.point#datepicker1(type='text' name='purchaseDate' value='#{purchaseDate}' required)
+            .col-md-3
+                input.inputFields.point#datepicker2(type='text' name='warrantyExpiration' value='#{warrantyExpiration}' required)
+            .col-md-3
+                select.inputFields.point(name='compStatus')
+                    option(value='Newly Acquired' selected='{{isCurrentState "Newly Acquired"}}') Newly Acquired
+                    option(value='Currently In Use' selected='{{isCurrentState "Currently In Use"}}') Currently In Use
+                    option(value='In For Repairs' selected='{{isCurrentState "In For Repairs"}}') In For Repairs
+                    option(value='Not In Use' selected='{{isCurrentState "Not In Use"}}') Not In Use
+            .col-md-3
+                select.inputFields.point(name='category')
+                    each cates
+                        +machine_category_options
+        .row
+            .col-md-3
+                h2.inputHeadings Location
+            .col-md-3
+                h2.inputHeadings Description
+        .row
+            .col-md-3
+                select.inputFields.point(name='location' required)
+                    each locations.places
+                        +location_machinery_option
+            .col-md-3
+                textArea.inputFields(name='description' value='#{description}' onclick='this.select()') #{description}
+
+        .row.button-row
+            hr
+            a.backButton(href='{{pathFor "machinery"}}' data-toggle="tooltip" title="Back to Machinery")
+                i.fa.fa-arrow-left
+            button.saveButton(type='input' data-toggle="tooltip" title="Update Machine")
+                i.fa.fa-floppy-o
+
+script.
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });

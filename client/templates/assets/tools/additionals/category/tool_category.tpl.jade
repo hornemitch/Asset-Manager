@@ -1,0 +1,10 @@
+form.template-body.addToolCategory
+   h1.pageHeadings Small Tool Categories
+   .row
+      a.table-back-button-2(href='{{pathFor "tools"}}' data-toggle="tooltip" title="Back to Tools")
+         i.fa.fa-arrow-left
+      a.table-add-button-2(href='{{pathFor "tool.category.create"}}' data-toggle="tooltip" title="Add Tool Category")
+         i.fa.fa-plus
+      .row
+         .col-md-10.col-md-offset-1
+            |   {{> tabular table=TabularTables.Tool_Category selector=selector class="table-bordered"}}

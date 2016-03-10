@@ -1,0 +1,14 @@
+.icon-template
+    a.goodIcon(href='{{pathFor "vehicle.detail"}}' data-toggle="tooltip" title="View Details")
+        i.fa.fa-eye
+    a.editIcon(href='{{pathFor "vehicle.edit"}}' data-toggle="tooltip" title="Update")
+        i.fa.fa-pencil
+    a.positiveIcon(href='{{pathFor "vehicle.daily"}}' data-toggle="tooltip" title="Dailies")
+        i.fa.fa-files-o
+    a.removeButton.trashIcon(href='#' data-toggle="tooltip" title="Delete")
+        i.fa.fa-trash
+
+script.
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });

@@ -1,0 +1,80 @@
+.template-body
+   .row
+      h1.pageHeadings Add Machine
+   form.addMachine.input-form
+      .row
+         .col-md-3
+            h2.inputHeadings Invoice Number
+         .col-md-3
+            h2.inputHeadings Purchase Order Number
+         .col-md-3
+            h2.inputHeadings Purchase Cost
+         .col-md-3
+            h2.inputHeadings Category
+      .row
+         .col-md-3
+            input.inputFields(type='text' autocomplete='off' name='invoiceNumber' placeholder='Enter Invoice Number')
+         .col-md-3
+            input.inputFields(type='text' autocomplete='off' name='purchaseOrderNumber' placeholder='Enter Purchase Order Number')
+         .col-md-3
+            input.inputFields(type='number' autocomplete='off' name='costPrice' step='0.01' placeholder='Enter Purchase Cost')
+         .col-md-3
+            select.inputFields.point(name='category')
+               each categories
+                  option(value='#{_id}') #{name}
+      .row
+         .col-md-3
+            h2.inputHeadings Supplier
+         .col-md-3
+            h2.inputHeadings Manufacturer
+         .col-md-3
+            h2.inputHeadings Model
+         .col-md-3
+            h2.inputHeadings Serial Number
+      .row
+         .col-md-3
+            input.inputFields(type='text' autocomplete='off' name='supplier' placeholder='Enter Supplier Name')
+         .col-md-3
+            input.inputFields(type='text' autocomplete='off' name='manufacturer' placeholder='Enter Manufacturer Name')
+         .col-md-3
+            input.inputFields(type='text' autocomplete='off' name='model' placeholder='Enter Machine Model')
+         .col-md-3
+            input.inputFields(type='text' autocomplete='off' name='serialNumber' placeholder='Enter Machine Serial Number')
+      .row
+         .col-md-3
+            h2.inputHeadings User
+         .col-md-3
+            h2.inputHeadings Purchase Date
+         .col-md-3
+            h2.inputHeadings Warranty Expiration
+         .col-md-3
+            h2.inputHeadings Location
+      .row
+         .col-md-3
+            input.inputFields(type='text' autocomplete='off' name='machUser' placeholder="Enter Machine's main User's Name")
+         .col-md-3
+            input.inputFields.point#datepicker1(type='text' name='purchaseDate')
+         .col-md-3
+            input.inputFields.point#datepicker2(type='text' name='warrantyExpiration')
+         .col-md-3
+            select.inputFields.point(name='location')
+               each locations
+                  +location_options
+      .row
+         .col-md-3
+            h2.inputHeadings Description
+      .row
+         .col-md-3
+            textarea.inputFields(name='description' rows='3' placeholder='Enter a description of the machine')
+
+      .row.button-row
+         hr
+         a.backButton(href='{{pathFor "machinery"}}' data-toggle="tooltip" title="Back to Machinery")
+            i.fa.fa-arrow-left
+         button.saveButton(type='input' data-toggle="tooltip" title="Save Machine")
+            i.fa.fa-floppy-o
+
+script.
+   $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+   });

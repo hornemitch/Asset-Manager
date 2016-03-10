@@ -1,0 +1,44 @@
+.template-body
+    .row
+        h1.pageHeadings Add Location
+    form.addLocation.input-form
+        .row
+            .col-md-3
+                h2.inputHeadings Site Name
+            .col-md-3
+                h2.inputHeadings Country
+            .col-md-3
+                h2.inputHeadings Province
+            .col-md-3
+                h2.inputHeadings City
+        .row
+            .col-md-3
+                input.inputFields(type="text" autocomplete="off" name="siteName" placeholder="Enter The Site's Name" required)
+            .col-md-3
+                input.inputFields(type="text" autocomplete="off" name="country" placeholder='Enter The Country Name' required)
+            .col-md-3
+                input.inputFields(type="text" autocomplete="off" name="province" placeholder='Enter The Province Name' required)
+            .col-md-3
+                input.inputFields(type="text" autocomplete="off" name="city" placeholder='Enter The City Name' required)
+        .row
+            .col-md-3
+                h2.inputHeadings Postal Code
+            .col-md-3
+                h2.inputHeadings Street and Number
+        .row
+            .col-md-3
+                input.inputFields(type="text" autocomplete="off" name="postalCode" placeholder='Enter The Postal Code' required)
+            .col-md-3
+                input.inputFields(type="text" autocomplete="off" name="streetAndNumber" placeholder='Enter The Street and Number' required)
+
+        .row.button-row
+            hr
+            a.backButton(href='{{pathFor "locations"}}' data-toggle="tooltip" title="Back")
+                i.fa.fa-arrow-left
+            button.saveButton(type='input' data-toggle="tooltip" title="Save Location")
+                i.fa.fa-floppy-o
+
+script.
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });

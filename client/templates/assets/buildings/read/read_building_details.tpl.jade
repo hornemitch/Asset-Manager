@@ -1,0 +1,70 @@
+.template-body.detail-template
+   .row
+      h1.pageHeadings Building Details
+   .row
+      .detail-div
+         table.table-bordered
+            tbody
+               tr
+                  th.col-md-12.centered Main Information
+         table.table-bordered
+            tbody
+               tr
+                  th Asset Number
+                  th Property ID
+                  th Building Name
+                  th Building Type
+                  th Status
+                  th Location
+               tr
+                  td.col-md-2.td-words #{assetNumber}
+                  td.col-md-2.td-words #{propertyId}
+                  td.col-md-2.td-words #{buildingName}
+                  td.col-md-2.td-words #{buildingType}
+                  td.col-md-2.td-words #{status}
+                  td.col-md-2.td-words #{locate}
+         table.table-bordered
+            tbody
+               tr
+                  th.col-md-12.centered Purchase Information
+         table.table-bordered
+            tbody
+               tr
+                  th Purchase Date
+                  th Purchase Cost
+                  th Current Value
+                  th Depreciation
+                  th Book Value
+               tr
+                  td.td-words #{purchaseDate}
+                  td R #{showValue purchaseCost}
+                  td R #{showValue currentValue}
+                  if manu
+                     td.td-words #{decDep}%
+                     td R #{showValue bookValue}
+                  else
+                     td.td-words Not Applicable
+                     td.td-words Not Applicable
+
+         table.table-bordered
+            tbody
+               tr
+                  th.col-md-4 Description
+                  td.col-md-8.td-words #{description}
+
+   .row.iconDiv
+      a.detailIcons.backButton(href='{{pathFor "buildings"}}' data-toggle="tooltip" title="Back to Buildings")
+         i.fa.fa-arrow-left
+      a.detailIcons.editIcon(href='{{pathFor "building.edit"}}' data-toggle="tooltip" title="Update Building")
+         i.fa.fa-pencil
+      a.detailIcons.moneyIcon(href='{{pathFor "building.revalue"}}' data-toggle="tooltip" title="Revaluations")
+         i.fa.fa-usd
+      a.detailIcons.positiveIcon(href='{{pathFor "building.improve"}}' data-toggle="tooltip" title="Improvements")
+         i.fa.fa-thumbs-up
+      a.detailIcons.badIcon(href='{{pathFor "building.impair"}}' data-toggle="tooltip" title="Impairments")
+         i.fa.fa-thumbs-down
+
+script.
+   $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+   });

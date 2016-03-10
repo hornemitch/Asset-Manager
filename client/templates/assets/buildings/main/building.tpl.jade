@@ -1,0 +1,17 @@
+.template-body
+        if hasLocations
+            h1.pageHeadings Buildings
+            .row
+                a.table-add-button(href='{{pathFor "building.add"}}' data-toggle="tooltip" title="Add Building")
+                    i.fa.fa-plus
+                a.table-category-button-1(href='{{pathFor "building.usefulLife"}}' data-toggle="tooltip" title="Change Useful Life")
+                    i.fa.fa-line-chart
+            .row
+                |   {{> tabular table=TabularTables.Buildings selector=selector class="table-bordered"}}
+        else
+            h1 No Location Saved
+            .col-md-8.col-md-offset-2
+                h3 You cannot store assets if you don't have at least one location to tie the asset to. Please create a location first
+            .col-md-2.col-md-offset-5
+                a(href='{{pathFor "locations"}}')
+                    button.inputButtons Locations

@@ -1,0 +1,85 @@
+.template-body
+   .row
+      h1.pageHeadings Machinery Details
+   .row
+      .detail-div
+         table.table-bordered
+            tbody
+               tr
+                  th.col-md-12.centered Main Information
+         table.table-bordered
+            tbody
+               tr
+                  th Asset Number
+                  th Serial Number
+                  th Category
+                  th User
+                  th Status
+                  th Location
+               tr
+                  td.col-md-2.td-words #{assetNumber}
+                  td.col-md-2.td-words #{serialNumber}
+                  td.col-md-2.td-words #{categoryName}
+                  td.col-md-2.td-words #{user}
+                  td.col-md-2.td-words #{status}
+                  td.col-md-2.td-words #{locate}
+         table.table-bordered
+            tbody
+               tr
+                  th.col-md-12.centered Financial Information
+         table.table-bordered
+            tbody
+               tr
+                  th.col-md-3 Invoice Number
+                  th.col-md-3 Purchase Order
+                  th.col-md-3 Purchase Date
+                  th.col-md-3 Purchase Price
+               tr
+                  td.col-md-3.td-words #{invoiceNumber}
+                  td.col-md-3.td-words #{purchaseOrderNumber}
+                  td.col-md-3.td-words #{purchaseDate}
+                  td.col-md-3.td-words R #{showValue costPrice}
+         table.table-bordered
+            tbody
+               tr
+                  th.col-md-4 Depreciation Rate
+                  th.col-md-4 Book Value
+                  th.col-md-4 Current Value
+               tr
+                  td.col-md-4.td-words #{decDep}% p/a
+                  td.col-md-4.td-words R #{showValue bookValue}
+                  td.col-md-4.td-words R #{showValue currentCost}
+         table.table-bordered
+            tbody
+               tr
+                  th.col-md-12.centered Machine Information
+         table.table-bordered
+            tbody
+               tr
+                  th.col-md-3 Supplier
+                  th.col-md-3 Manufacturer
+                  th.col-md-3 Model
+                  th.col-md-3 Warranty Expiration
+               tr
+                  td.col-md-3.td-words #{supplier}
+                  td.col-md-3.td-words #{manufacturer}
+                  td.col-md-3.td-words #{model}
+                  td.col-md-3.td-words #{warrantyExpiration}
+         table.table-bordered
+            tbody
+               tr
+                  th.col-md-4 Description
+                  td.col-md-8.td-words #{description}
+
+   .row
+      a.detailIcons.backButton(href='{{pathFor "machinery"}}' data-toggle="tooltip" title="Back to Machinery")
+         i.fa.fa-arrow-left
+      a.detailIcons.editIcon(href='{{pathFor "machine.edit"}}' data-toggle="tooltip" title="Update")
+         i.fa.fa-pencil
+      a.detailIcons.positiveIcon(href='{{pathFor "machine.month"}}' data-toggle="tooltip" title="Monthly")
+         i.fa.fa-calendar
+
+script.
+   $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+   });

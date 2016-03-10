@@ -1,0 +1,75 @@
+.template-body
+   .row
+      h1.pageHeadings Software Details
+   .row
+      .detail-div
+         table.table-bordered
+            tbody
+               tr
+                  th.col-md-12.centered Asset Information
+         table.table-bordered
+            tbody
+               tr
+                  th Asset Number
+                  th Software Name
+                  th Status
+                  th Location
+               tr
+                  td.td-words #{assetNumber}
+                  td.td-words #{name}
+                  td.td-words #{status}
+                  td.td-words #{location}
+         table.table-bordered
+            tbody
+               tr
+                  th.col-md-12.centered Financial Information
+         table.table-bordered
+            tbody
+               tr
+                  th Invoice Number
+                  th Purchase Order
+                  th Purchase Date
+                  th Purchase Price
+                  th Depreciation Rate
+                  th Book Value
+               tr
+                  td.col-md-2.td-words #{invoiceNumber}
+                  td.col-md-2.td-words #{purchaseOrder}
+                  td.col-md-2.td-words #{acquiredDate}
+                  td.col-md-2 R #{showValue purchaseCost}
+                  td.col-md-2.td-words #{decDep}% p/a
+                  td.col-md-2 R #{showValue bookValue}
+         table.table-bordered
+            tbody
+               tr
+                  th.col-md-12.centered Software Information
+         table.table-bordered
+            tbody
+               tr
+                  th Developer
+                  th Supplier
+                  th Licence Key
+                  th Installed
+                  th Licence Renewal Date
+               tr
+                  td.td-words #{developer}
+                  td.td-words #{supplier}
+                  td.td-words #{licenceKey}
+                  td.td-words #{installed}
+                  td.td-words #{licenceRenewalDate}
+         table.table-bordered
+            tbody
+               tr
+                  th.col-md-4 Description
+                  td.col-md-8.td-words #{description}
+
+   .row
+      a.detailIcons.backButton(href='#' data-toggle="tooltip" title="Back to Software")
+         i.fa.fa-arrow-left
+      a.detailIcons.editIcon(href='{{pathFor "computer.software.update"}}' data-toggle="tooltip" title="Update")
+         i.fa.fa-pencil
+
+script.
+   $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+   });

@@ -1,0 +1,32 @@
+.template-body
+   .row
+      h1.pageHeadings Add Impairment
+   form.impairment-form.input-form
+      .row
+         h2.assetName(data-toggle='tooltip' title='Building Name') #{buildingName}
+      .row
+         .col-md-3.col-md-offset-1
+            h2.inputHeadings Damages Cost
+         .col-md-3
+            h2.inputHeadings Date Of Revalue
+         .col-md-4
+            h2.inputHeadings Description
+      .row
+         .col-md-3.col-md-offset-1
+            input.inputFields(type="number" autocomplete="off" name="impairmentsValue" step='0.01' placeholder='Enter The Cost Of Impairment')
+         .col-md-3
+            input.inputFields.point#datepicker(type="text" autocomplete="off" name="impairmentsDateOfRevalue")
+         .col-md-4
+            textarea.inputFields( autocomplete="off" name="impairmentsDescription" rows='3' placeholder='Describe The Impairment Made')
+
+      .row.button-row
+         hr
+         a.backButton(href='{{pathFor "building.impair"}}' data-toggle="tooltip" title="Back to Impairments")
+            i.fa.fa-arrow-left
+         button.saveButton(type='submit' data-toggle="tooltip" title="Save Impairment")
+            i.fa.fa-floppy-o
+
+script.
+   $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+   });

@@ -1,0 +1,26 @@
+.template-body
+   .row
+   h1.pageHeadings Add Vehicle Category
+   form.add-vehicle-category.input-form
+      .row
+         .col-md-3.col-md-offset-3
+            h2.inputHeadings Category Name
+         .col-md-3
+            h2.inputHeadings Useful Life
+      .row
+         .col-md-3.col-md-offset-3
+            input.inputFields(type='text' name = 'categoryName' autocomplete='off' placeholder='Enter Category Name')
+         .col-md-3
+            input.inputFields(type='number' name = 'usefulLife' step='1' placeholder='Enter Useful Life in Years')
+
+      .row.button-row
+         hr
+         a.backButton(href='{{pathFor "vehicle.category"}}' data-toggle="tooltip" title="Back to Vehicle Categories")
+            i.fa.fa-arrow-left
+         button.saveButton(type='input' data-toggle="tooltip" title="Save Vehicle Category")
+            i.fa.fa-floppy-o
+
+script.
+   $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+   });

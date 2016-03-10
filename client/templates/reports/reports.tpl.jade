@@ -1,0 +1,64 @@
+.template-body
+    h1.pageHeadings Reports
+    .row
+        h2.assetName Overview Reports
+        hr
+        .row(style='text-align: left')
+            .col-md-10.col-md-offset-1
+                .col-md-3
+                    .row
+                        i.fa.fa-file-text.report-icons
+                        a.reportLinks(href='{{pathFor "overviewCostReport"}}') Asset OverView
+                    .row
+                        i.fa.fa-file-text.report-icons
+                        a.reportLinks(href='{{pathFor "buildingReport"}}') Building Report
+                .col-md-3
+                    .row
+                        i.fa.fa-file-text.report-icons
+                        a.reportLinks(href='{{pathFor "cellphoneReport"}}') Cell Phone Report
+                    .row
+                        i.fa.fa-file-text.report-icons
+                        a.reportLinks(href='{{pathFor "computerReport"}}') Computer Report
+                .col-md-3
+                    .row
+                        i.fa.fa-file-text.report-icons
+                        a.reportLinks(href='{{pathFor "furnitureReport"}}') Furniture Report
+                    .row
+                        i.fa.fa-file-text.report-icons
+                        a.reportLinks(href='{{pathFor "machineryReport"}}') Machinery Report
+                .col-md-3
+                    .row
+                        i.fa.fa-file-text.report-icons
+                        a.reportLinks(href='{{pathFor "toolReport"}}') Small Tool Report
+                    .row
+                        i.fa.fa-file-text.report-icons
+                        a.reportLinks(href='{{pathFor "vehicleReport"}}') Vehicle Report
+        hr
+//
+    .row
+        h2.assetName Extract Data
+        hr
+        .col-md-10.col-md-offset-1(style='text-align: left')
+            .row
+                .col-md-3
+                    i.fa.fa-cloud-download.report-icons
+                    a.reportLinks(href='{{pathFor "buildings_extract_csv"}}') Building Data
+                .col-md-3
+                    i.fa.fa-cloud-download.report-icons
+                    a.reportLinks(href='{{pathFor "buildings_report_csv"}}')
+                .col-md-3
+                    i.fa.fa-cloud-download.report-icons
+                    a.reportLinks(href='{{pathFor "buildings_report_csv"}}')
+                .col-md-3
+                    i.fa.fa-cloud-download.report-icons
+                    a.reportLinks(href='{{pathFor "buildings_report_csv"}}')
+            .row
+                .col-md-3
+                    i.fa.fa-cloud-download.report-icons
+                    a.reportLinks(href='{{pathFor "buildings_report_csv"}}')
+                .col-md-3
+                    i.fa.fa-cloud-download.report-icons
+                    a.reportLinks(href='{{pathFor "buildings_report_csv"}}')
+                .col-md-3
+                    i.fa.fa-cloud-download.report-icons
+                    a.reportLinks(href='{{pathFor "buildings_report_csv"}}')

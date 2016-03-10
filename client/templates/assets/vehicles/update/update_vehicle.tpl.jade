@@ -1,0 +1,92 @@
+.template-body
+    .row
+        h1.pageHeadings Update Vehicle
+    form.vehicle-edit-form.input-form
+        .row
+            .col-md-3
+                h2.inputHeadings Invoice Number
+            .col-md-3
+                h2.inputHeadings Purchase Order Number
+            .col-md-3
+                h2.inputHeadings Purchase Date
+            .col-md-3
+                h2.inputHeadings Purchase Cost
+        .row
+            .col-md-3
+                input.inputFields(type='text' autocomplete='off' name='invoiceNumber' onClick='this.select()' value='#{invoiceNumber}'  required)
+            .col-md-3
+                input.inputFields(type='text' autocomplete='off' name='purchaseOrderNumber' onClick='this.select()'  value='#{purchaseOrderNumber}' required)
+            .col-md-3
+                input.inputFields.point#datepicker1(type='text' name='purchaseDate' value='#{purchaseDate}' required)
+            .col-md-3
+                input.inputFields(type='number' autocomplete='off' name='costPrice' onClick='this.select()' step='0.01'  value='#{costPrice}' required)
+        .row
+            .col-md-3
+                h2.inputHeadings Supplier
+            .col-md-3
+                h2.inputHeadings Manufacturer
+            .col-md-3
+                h2.inputHeadings Model
+            .col-md-3
+                h2.inputHeadings Status
+        .row
+            .col-md-3
+                input.inputFields(type='text' autocomplete='off' name='supplier' onClick='this.select()'  value='#{supplier}' required)
+            .col-md-3
+                input.inputFields(type='text' autocomplete='off' name='manufacturer' onClick='this.select()'  value='#{manufacturer}' required)
+            .col-md-3
+                input.inputFields(type='text' autocomplete='off' name='model' onClick='this.select()'  value='#{model}' required)
+            .col-md-3
+                select.inputFields.point(name='compStatus')
+                    option(value='Newly Acquired' selected='{{isCurrentState "Newly Acquired"}}') Newly Acquired
+                    option(value='Currently In Use' selected='{{isCurrentState "Currently In Use"}}') Currently In Use
+                    option(value='In For Repairs' selected='{{isCurrentState "In For Repairs"}}') In For Repairs
+                    option(value='Not In Use' selected='{{isCurrentState "Not In Use"}}') Not In Use
+        .row
+            .col-md-3
+                h2.inputHeadings Category
+            .col-md-3
+                h2.inputHeadings Warranty Expiration Date
+            .col-md-3
+                h2.inputHeadings Licence Plate Number
+            .col-md-3
+                h2.inputHeadings Vehicle Identification Number
+        .row
+            .col-md-3
+                select.inputFields.point(name='category')
+                    each cates
+                        +vehicle_category_options
+            .col-md-3
+                input.inputFields.point#datepicker2(type='text' name='warrantyExpiration' value='#{warrantyExpiration}' required)
+            .col-md-3
+                input.inputFields(type='text' autocomplete='off' name='licencePlate' onClick='this.select()'  value='#{licencePlate}' required)
+            .col-md-3
+                input.inputFields(type='text' autocomplete='off' name='vin' onClick='this.select()'  value='#{VIN}' required)
+        .row
+            .col-md-3
+                h2.inputHeadings Engine Identification Number
+            .col-md-3
+                h2.inputHeadings Location
+            .col-md-3
+                h2.inputHeadings Description
+        .row
+            .col-md-3
+                input.inputFields(type='text' autocomplete='off' name='engineNumber' onClick='this.select()'  value='#{engineNumber}' required)
+            .col-md-3
+                select.inputFields.point(name='location')
+                    each locations.places
+                        +location_vehicle_option
+            .col-md-3
+                textarea.inputFields(name='desc' onClick='this.select()') #{description}
+
+        .row.button-row
+            hr
+            a.backButton(href='{{pathFor "vehicles"}}' data-toggle="tooltip" title="Back to Vehicles")
+                i.fa.fa-arrow-left
+            button.saveButton(type='input' data-toggle="tooltip" title="Update Vehicle")
+                i.fa.fa-floppy-o
+
+script.
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });

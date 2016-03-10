@@ -1,0 +1,18 @@
+.template-body
+   .row
+      h1.pageHeadings Revaluation of Building
+   .row
+      h2.assetName(data-toggle='tooltip' title='Building Name') #{buildingName}
+   .row
+      a.table-back-button-2(href='{{pathFor "buildings"}}' data-toggle="tooltip" title="Back to Buildings")
+         i.fa.fa-arrow-left
+      a.table-add-button-2(href='{{pathFor "building.revalue.add"}}' data-toggle="tooltip" title="Add Revaluation")
+         i.fa.fa-plus
+   .row
+      .col-md-10.col-md-offset-1
+         |   {{> tabular table=TabularTables.BuildingRevaluation selector=selector class="table-bordered"}}
+
+script.
+   $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+   });

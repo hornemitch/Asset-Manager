@@ -1,0 +1,35 @@
+.template-body
+   h1.pageHeadings Cell Phone Monthly Details
+   h2.assetName(data-toggle='tooltip' title='Month') #{month}
+   .row
+      .col-md-3.leftBorder
+         h2.detailHeading Total Bill
+         h4.detailBody R #{showValue totalBill}
+      .col-md-3.leftBorder
+         h2.detailHeading Subscription Total
+         h4.detailBody R #{showValue subscriptionTotal}
+      .col-md-3.leftBorder
+         h2.detailHeading Difference
+         h4.detailBody R #{showValue difference}
+      .col-md-3
+         h2.detailHeading Calls Cost
+         h4.detailBody R #{showValue callsCost}
+   .row
+      .col-md-3.leftBorder
+         h2.detailHeading Data Services
+         h4.detailBody R #{showValue dataServices}
+      .col-md-3.leftBorder
+         h2.detailHeading Other Costs
+         h4.detailBody R #{showValue other}
+      .col-md-3.leftBorder
+         h2.detailHeading Comment
+         h4.detailBody #{comment}
+
+   .row
+      a.backButton(href='#' data-toggle="tooltip" title="Back to Cellphone Monthlies")
+         i.fa.fa-arrow-left
+
+script.
+   $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+   });

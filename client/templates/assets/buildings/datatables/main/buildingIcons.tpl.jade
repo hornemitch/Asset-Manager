@@ -1,0 +1,18 @@
+.row.icon-template
+   a.goodIcon(href='{{pathFor "building.detail"}}' data-toggle="tooltip" title="View Details")
+       i.fa.fa-eye
+   a.editIcon(href='{{pathFor "building.edit"}}' data-toggle="tooltip" title="Update")
+      i.fa.fa-pencil
+   a.moneyIcon(href='{{pathFor "building.revalue"}}' data-toggle="tooltip" title="Revaluations")
+      i.fa.fa-usd
+   a.positiveIcon(href='{{pathFor "building.improve"}}' data-toggle="tooltip" title="Improvements")
+      i.fa.fa-thumbs-up
+   a.badIcon(href='{{pathFor "building.impair"}}' data-toggle="tooltip" title="Impairments")
+      i.fa.fa-thumbs-down
+   a.removeButton.trashIcon(href='#' data-toggle="tooltip" title="Delete")
+      i.fa.fa-trash
+
+script.
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });

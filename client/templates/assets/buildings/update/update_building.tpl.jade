@@ -1,0 +1,72 @@
+.template-body
+    .row
+        h1.pageHeadings Update Building
+    form.building-edit-form.input-form
+        .row
+            .col-md-3
+                h2.inputHeadings Building Name
+            .col-md-3
+                h2.inputHeadings Property Id
+            .col-md-3
+                h2.inputHeadings Status
+            .col-md-3
+                h2.inputHeadings Purchase Date
+        .row
+            .col-md-3
+                input.inputFields(type='text' onclick='this.select()' name='buildingName' autocomplete='off' value='#{buildingName}')
+            .col-md-3
+                input.inputFields(type='text' onclick='this.select()' name='propertyId' autocomplete='off' value='#{propertyId}')
+            .col-md-3
+                select.inputFields.point(name='status')
+                    option(value='Newly Acquired' selected='{{isCurrentState "Newly Acquired"}}') Newly Acquired
+                    option(value='Currently In Use' selected='{{isCurrentState "Currently In Use"}}') Currently In Use
+                    option(value='Not In Use' selected='{{isCurrentState "Not In Use"}}') Not In Use
+            .col-md-3
+                input.inputFields.point#datepicker(type='text' onclick='this.select()' name='purchaseDate' autocomplete='off' value='#{purchaseDate}')
+        .row
+            .col-md-3
+                h2.inputHeadings Purchase Cost
+            .col-md-3
+                h2.inputHeadings Location
+            .col-md-3
+                h2.inputHeadings Description
+        .row
+            .col-md-3
+                input.inputFields(type='text' onclick='this.select()' name='purchaseCost' autocomplete='off' value='#{purchaseCost}')
+            .col-md-3
+                select.inputFields.point(name='locateSelect')
+                    each locations.places
+                        +location_building_option
+            .col-md-3
+                textarea.inputFields(onclick='this.select()' name='description') #{description}
+
+        .row
+            hr
+            if isFactory
+                .col-md-12
+                    a.detailIcons.is-not-factory.point(data-toggle='tooltip' title='Manufacturing Building')
+                        i.fa.fa-industry.goodIcon
+                script.
+                    $(document).ready(function () {
+                        $('[data-toggle="tooltip"]').tooltip();
+                    });
+            else
+                .col-md-12
+                    a.detailIcons.is-factory.point(data-toggle='tooltip' title='Normal Building')
+                        i.fa.fa-building.goodIcon
+                script.
+                    $(document).ready(function () {
+                        $('[data-toggle="tooltip"]').tooltip();
+                    });
+
+        .row.button-row
+            hr
+            a.backButton(href='{{pathFor "buildings"}}' data-toggle="tooltip" title="Back to Buildings")
+                i.fa.fa-arrow-left
+            button.saveButton(type='input' href='#' data-toggle="tooltip" title="Update Building")
+                i.fa.fa-floppy-o
+
+script.
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });

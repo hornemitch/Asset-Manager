@@ -1,0 +1,56 @@
+meta(charset='utf-8')
+link(href='https://fonts.googleapis.com/css?family=Play:400,700', rel='stylesheet', type='text/css')
+nav.navbar.navbar-fixed-top
+	.container-fluid
+		if userLoggedIn
+			if isAdmin
+				a.navbar-brand(href='{{pathFor "default"}}') AM
+				ul.nav.nav-tabs
+					li
+						a(href='{{pathFor "register"}}') Register
+					li
+						a(href='{{pathFor "register.company"}}') Register Company
+					li
+						a(href='{{pathFor "checkUsers"}}') View Users
+					li
+						a.logoutButton(href='#') Log out
+			else
+				a.navbar-brand(href='{{pathFor "default"}}') AM
+				ul.nav.nav-tabs
+					li.dropdown
+						a.dropdown-toggle(data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false") Assets
+							span.fa.fa-caret-down
+						ul.dropdown-menu
+							a(href='{{pathFor "buildings"}}')
+								li Buildings
+							a(href='{{pathFor "cellphones"}}')
+								li Cell phones
+							a(href='{{pathFor "computers"}}')
+								li Computers
+							a(href='{{pathFor "furniture"}}')
+								li Furniture
+							a(href='{{pathFor "machinery"}}')
+								li Machinery
+							a(href='{{pathFor "tools"}}')
+								li Tools
+							a(href='{{pathFor "vehicles"}}')
+								li Vehicles
+					li
+						a(href='{{pathFor "reports"}}') Reports
+					li
+						a(href='{{pathFor "locations"}}') Locations
+					li
+						a(href='{{pathFor "tutorial"}}') Tutorial
+					li
+						a.logoutButton(href='#') Log Out
+
+		else
+			a.navbar-brand(href='{{pathFor "default"}}') AM
+			ul.nav.nav-tabs
+				li
+					a.loginNav(href='{{pathFor "login"}}') Log In
+
+main.body-container
+	+yield
+
+|	{{> yield "tutorial"}}

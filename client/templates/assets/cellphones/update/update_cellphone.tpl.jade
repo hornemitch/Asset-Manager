@@ -1,0 +1,122 @@
+.template-body
+    .row
+        h1.pageHeadings Update Cell Phone
+    form.cellphone-edit-form.input-form
+        .row
+            .col-md-3
+                h2.inputHeadings Status
+            .col-md-3
+                h2.inputHeadings Invoice Number
+            .col-md-3
+                h2.inputHeadings Purchase Order Number
+            .col-md-3
+                h2.inputHeadings Purchase Price
+        .row
+            .col-md-3
+                select.inputFields.point(name='status')
+                    option(value='Newly Acquired' selected='{{isCurrentState "Newly Acquired"}}') Newly Acquired
+                    option(value='Currently In Use' selected='{{isCurrentState "Currently In Use"}}') Currently In Use
+                    option(value='In For Repairs' selected='{{isCurrentState "In For Repairs"}}') In For Repairs
+                    option(value='Not In Use' selected='{{isCurrentState "Not In Use"}}') Not In Use
+            .col-md-3
+                input.inputFields(type='text' onClick='this.select();' name='invoiceNumber' autocomplete='off' value='#{invoiceNumber}')
+            .col-md-3
+                input.inputFields(type='text' onClick='this.select();' name='purchaseOrderNumber' autocomplete='off' value='#{purchaseOrderNumber}')
+            .col-md-3
+                input.inputFields(type='number' onClick='this.select();' name='costPrice' step='0.01' autocomplete='off' value='#{costPrice}')
+        .row
+            .col-md-3
+                h2.inputHeadings Purchase Date
+            .col-md-3
+                h2.inputHeadings Model
+            .col-md-3
+                h2.inputHeadings Supplier
+            .col-md-3
+                h2.inputHeadings Manufacturer
+        .row
+            .col-md-3
+                input.inputFields.point#datepicker(type='text' onClick='this.select();' name='purchaseDate' autocomplete='off' value='#{purchaseDate}')
+            .col-md-3
+                input.inputFields(type='text' onClick='this.select();' name='model' autocomplete='off' value='#{model}')
+            .col-md-3
+                input.inputFields(type='text' onClick='this.select();' name='supplier' autocomplete='off' value='#{supplier}')
+            .col-md-3
+                input.inputFields(type='text' onClick='this.select();' name='manufacturer' autocomplete='off' value='#{manufacturer}')
+        .row
+            .col-md-3
+                h2.inputHeadings Location
+            .col-md-3
+                h2.inputHeadings Warranty Expiration
+            .col-md-3
+                h2.inputHeadings Cellphone Number
+            .col-md-3
+                h2.inputHeadings User
+        .row
+            .col-md-3
+                select.inputFields.point(name='locationSelect')
+                    each locations.places
+                        +location_cellphone_option
+            .col-md-3
+                input.inputFields.point#datepicker1(type='text' onClick='this.select();' name='warrantyExpiration' autocomplete='off' value='#{warrantyExpiration}')
+            .col-md-3
+                input.inputFields(type='text' onClick='this.select();' name='number' autocomplete='off' value='#{number}')
+            .col-md-3
+                input.inputFields(type='text' onClick='this.select();' name='user' autocomplete='off' value='#{user}')
+        .row
+            .col-md-3
+                h2.inputHeadings PIN Number
+            .col-md-3
+                h2.inputHeadings PUK Number
+            .col-md-3
+                h2.inputHeadings SIM Number
+            .col-md-3
+                h2.inputHeadings Description
+        .row
+            .col-md-3
+                input.inputFields(type='text' onClick='this.select();' name='pin' autocomplete='off' value='#{pin}')
+            .col-md-3
+                input.inputFields(type='text' onClick='this.select();' name='puk' autocomplete='off' value='#{puk}')
+            .col-md-3
+                input.inputFields(type='text' onClick='this.select();' name='sim' autocomplete='off' value='#{sim}')
+            .col-md-3
+                textarea.inputFields(onClick='this.select();' name='desc') #{description}
+        .row
+            hr
+            if hasContract
+                .col-md-12
+                    a.contract(href='#' data-toggle='tooltip' title='Cellphone has a contract')
+                        i.fa.fa-file
+                script.
+                    $(document).ready(function () {
+                        $('[data-toggle="tooltip"]').tooltip();
+                    });
+            else
+                .col-md-12
+                    a.noContract(href='#' data-toggle='tooltip' title='Cellphone has no contract')
+                        i.fa.fa-file
+                script.
+                    $(document).ready(function () {
+                        $('[data-toggle="tooltip"]').tooltip();
+                    });
+        .row
+            .col-md-3.col-md-offset-3
+                h2.inputHeadings Contract Start
+            .col-md-3
+                h2.inputHeadings Contract End
+        .row
+            .col-md-3.col-md-offset-3
+                input.inputFields.point#datepicker2(type='text' onClick='this.select();' name='contractStart' autocomplete='off' value='#{contractStart}')
+            .col-md-3
+                input.inputFields.point#datepicker3(type='text' onClick='this.select();' name='contractEnd' autocomplete='off' value='#{contractEnd}')
+
+        .row.button-row
+            hr
+            a.backButton(href='{{pathFor "cellphones"}}' data-toggle="tooltip" title="Back to Cellphones")
+                i.fa.fa-arrow-left
+            button.saveButton(type='input' data-toggle="tooltip" title="Update Cellphone")
+                i.fa.fa-floppy-o
+
+script.
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });

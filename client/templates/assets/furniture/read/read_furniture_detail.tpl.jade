@@ -1,0 +1,73 @@
+.template-body
+   .row
+      h1.pageHeadings Furniture Details
+   .row
+      .detail-div
+         table.table-bordered
+            tbody
+               tr
+                  th.col-md-12.centered Main Information
+         table.table-bordered
+            tbody
+               tr
+                  th Asset Number
+                  th Office
+                  th User
+                  th Status
+                  th Location
+               tr
+                  td.col-md-2.td-words #{assetNumber}
+                  td.col-md-2.td-words #{office}
+                  td.col-md-2.td-words #{user}
+                  td.col-md-2.td-words #{status}
+                  td.col-md-2.td-words #{locate}
+         table.table-bordered
+            tbody
+               tr
+                  th.col-md-12.centered Financial Information
+         table.table-bordered
+            tbody
+               tr
+                  th.col-md-2 Invoice Number
+                  th.col-md-2 Purchase Order
+                  th.col-md-2 Purchase Date
+                  th.col-md-2 Purchase Price
+                  th.col-md-2 Depreciation Rate
+                  th.col-md-2 Book Value
+               tr
+                  td.col-md-2.td-words #{invoiceNumber}
+                  td.col-md-2.td-words #{purchaseOrderNumber}
+                  td.col-md-2.td-words #{purchaseDate}
+                  td.col-md-2.td-words R #{showValue costPrice}
+                  td.col-md-2.td-words #{decDep}% p/a
+                  td.col-md-2.td-words R #{showValue bookValue}
+         table.table-bordered
+            tbody
+               tr
+                  th.col-md-12.centered Furniture Information
+         table.table-bordered
+            tbody
+               tr
+                  th.col-md-4 Supplier
+                  th.col-md-4 Manufacturer
+                  th.col-md-4 Model
+               tr
+                  td.col-md-4.td-words #{supplier}
+                  td.col-md-4.td-words #{manufacturer}
+                  td.col-md-4.td-words #{model}
+         table.table-bordered
+            tbody
+               tr
+                  th.col-md-4 Description
+                  td.col-md-8.td-words #{description}
+
+   .row
+      a.detailIcons.backButton(href='{{pathFor "furniture"}}' data-toggle="tooltip" title="Back to Furniture")
+         i.fa.fa-arrow-left
+      a.detailIcons.editIcon(href='{{pathFor "furniture.edit"}}' data-toggle="tooltip" title="Update")
+         i.fa.fa-pencil
+
+script.
+   $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+   });

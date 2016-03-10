@@ -1,0 +1,7 @@
+.template-body
+   h1.pageHeadings Locations
+   .row
+      a.table-add-button(href='{{pathFor "location.create"}}' data-toggle="tooltip" title="Add Location")
+         i.fa.fa-plus
+   .row
+      |   {{> tabular table=TabularTables.Locations selector=selector class="table-bordered"}}

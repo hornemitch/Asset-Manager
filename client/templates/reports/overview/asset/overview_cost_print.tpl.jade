@@ -1,0 +1,126 @@
+.template-body
+    .row
+        h1.pageHeadings Asset Overview Report
+    .row
+        table.table-bordered.report-table.col-md-10.col-md-offset-1
+            tbody
+                tr
+                    th.report-center Asset Type
+                    th.report-center Quantity
+                    th.report-center.col-md-2 Total Cost
+                    th.report-center Acc.Depreciation
+                    th.report-center Book Values
+                tr
+                    td
+                        p.tableTitles Buildings
+                    td.report-center #{buildingNumber}
+                    td
+                        p.currency R
+                        p.amount #{showValue buildingTotal}
+                    td
+                        p.currency R
+                        p.amount #{showValue buildingDepreciation}
+                    td
+                        p.currency R
+                        p.amount #{showValue buildingBookValue}
+                tr
+                    td
+                        p.tableTitles Cellphones
+                    td.report-center #{cellphoneNumber}
+                    td
+                        p.currency R
+                        p.amount #{showValue cellphoneCosts}
+                    td
+                        p.currency R
+                        p.amount #{showValue cellphoneDepreciation}
+                    td
+                        p.currency R
+                        p.amount #{showValue cellphoneBookvalue}
+                tr
+                    td
+                        p.tableTitles Computers
+                    td.report-center #{computerNumber}
+                    td
+                        p.currency R
+                        p.amount #{showValue computerCosts}
+                    td
+                        p.currency R
+                        p.amount #{showValue computerDepreciation}
+                    td
+                        p.currency R
+                        p.amount #{showValue computerBookvalue}
+                tr
+                    td
+                        p.tableTitles Furniture
+                    td.report-center #{furnitureNumber}
+                    td
+                        p.currency R
+                        p.amount #{showValue furnitureCosts}
+                    td
+                        p.currency R
+                        p.amount #{showValue furnitureDepreciation}
+                    td
+                        p.currency R
+                        p.amount #{showValue furnitureBookvalue}
+                tr
+                    td
+                        p.tableTitles Machinery
+                    td.report-center #{machineryNumber}
+                    td
+                        p.currency R
+                        p.amount #{showValue machineryCosts}
+                    td
+                        p.currency R
+                        p.amount #{showValue machineryDepreciation}
+                    td
+                        p.currency R
+                        p.amount #{showValue machineryBookvalue}
+                tr
+                    td
+                        p.tableTitles Small Tools
+                    td.report-center #{toolNumber}
+                    td
+                        p.currency R
+                        p.amount #{showValue toolCosts}
+                    td
+                        p.currency R
+                        p.amount #{showValue toolDepreciation}
+                    td
+                        p.currency R
+                        p.amount #{showValue toolBookvalue}
+                tr
+                    td
+                        p.tableTitles Vehicles
+                    td.report-center #{vehicleNumber}
+                    td
+                        p.currency R
+                        p.amount #{showValue vehicleCosts}
+                    td
+                        p.currency R
+                        p.amount #{showValue vehicleDepreciation}
+                    td
+                        p.currency R
+                        p.amount #{showValue vehicleBookvalue}
+                tr
+                    td
+                        b
+                            p.tableTitles Totals
+                    td.report-center
+                        i.fa.fa-minus-circle.point(data-toggle="tooltip" title="Not Applicable")
+                    td
+                        b.currency R
+                        b
+                            p.amount #{showValue totalCosts}
+                    td
+                        b.currency R
+                        b
+                            p.amount #{showValue totalDep}
+                    td
+                        b.currency R
+                        b
+                            p.amount #{showValue totalValue}
+
+script.
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });

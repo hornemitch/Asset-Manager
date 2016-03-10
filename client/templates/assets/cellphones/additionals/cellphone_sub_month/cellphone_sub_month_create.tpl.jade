@@ -1,0 +1,46 @@
+.template-body
+   .row
+      h1.pageHeadings Cell Phone Monthly
+   form.cellphone-month-form.input-form
+      .row
+         h2.assetName(data-toggle='tooltip' title='Cellphone Number') #{cellNumber number}
+      .row
+         .col-md-3
+            h2.inputHeadings Month
+         .col-md-3
+            h2.inputHeadings Subscription Total
+         .col-md-3
+            h2.inputHeadings Calls Cost
+         .col-md-3
+            h2.inputHeadings Data Service Cost
+      .row
+         .col-md-3
+            input.inputFields.point#datepicker(type="text" name="month")
+         .col-md-3
+            input.inputFields(type='number' step='0.01' name="subscriptionTotal" placeholder='Enter Total Airtime Cost')
+         .col-md-3
+            input.inputFields(type='number' step='0.01' name="callsCost" placeholder='Enter Total Airtime Cost')
+         .col-md-3
+            input.inputFields(type='number' step='0.01' name='dataCost' autocomplete='off' placeholder='Enter Data Cost')
+      .row
+         .col-md-3
+            h2.inputHeadings Other Costs
+         .col-md-3
+            h2.inputHeadings Optional Comment
+      .row
+         .col-md-3
+            input.inputFields(type='number' step='0.01' name='other' autocomplete='off' placeholder='Enter Data Cost')
+         .col-md-3
+            textarea.inputFields(autocomplete='off' name='comment' rows='3' placeholder="Enter an Additional Comment" )
+
+      .row.button-row
+         hr
+         a.backButton(href='{{pathFor "cellphone.monthly"}}' data-toggle="tooltip" title="Back to Cellphone Monthlies")
+            i.fa.fa-arrow-left
+         button.saveButton(type='input' data-toggle="tooltip" title="Save Cellphone monthly")
+            i.fa.fa-floppy-o
+
+script.
+   $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+   });

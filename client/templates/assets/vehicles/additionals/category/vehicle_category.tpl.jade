@@ -1,0 +1,11 @@
+.template-body
+   .row
+      h1.pageHeadings Vehicle Categories
+   .row
+      a.table-back-button-2(href='{{pathFor "vehicles"}}' data-toggle="tooltip" title="Back to Vehicles")
+         i.fa.fa-arrow-left
+      a.table-add-button-2(href='{{pathFor "vehicle.category.create"}}' data-toggle="tooltip" title="Add Vehicle Category")
+         i.fa.fa-plus
+   .row
+      .col-md-10.col-md-offset-1
+         |   {{> tabular table=TabularTables.Vehicle_Category selector=selector class="table-bordered"}}

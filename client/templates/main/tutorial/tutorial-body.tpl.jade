@@ -1,0 +1,760 @@
+.floating-menu
+   ul
+      li
+         a#div-1-a(data-trigger='hover' data-scroll data-toggle='tooltip' data-placement="right" title='Overview' href='#div1' )
+            i.fa.fa-eye
+      li
+         a#div-2-a(data-trigger='hover' data-scroll data-toggle='tooltip' data-placement="right" title='Getting Started' href='#getStarted')
+            i.fa.fa-play
+      li
+         a#div-3-a(data-trigger='hover' data-scroll data-toggle='tooltip' data-placement="right" title='Assets' href='#assets')
+            i.fa.fa-database
+      li
+         a#div-4-a(data-trigger='hover' data-scroll data-toggle='tooltip' data-placement="right" title='Icons' href='#icons')
+            i.fa.fa-puzzle-piece
+      li
+         a#div-5-a(data-trigger='hover' data-scroll data-toggle='tooltip' data-placement="right" title='Asset in-Depth' href='#assetDetails')
+            i.fa.fa-sort-alpha-asc
+      li
+         a#div-6-a(data-trigger='hover' data-scroll data-toggle='tooltip' data-placement="right" title='Reports' href='#report-detail')
+            i.fa.fa-files-o
+
+.row.tutorial-overview-div#div1
+   .row
+      h1.pageHeadings Overview
+   .row
+      .col-md-6.col-md-offset-3
+         p AM Sores a great deal of information about a wide category of assets, some who have to be stored fundamentally different from others.
+         p AM specialises in storing large quantities of data about a large number of assets, keeping it neatly stored in one central location. It generates reports from this information, providing an accurate take on the company's assets, and their financial implications
+         p Some of the features AM provides are:
+   .row.tutorial-overview-icons
+      .col-md-2.col-md-offset-2
+         .row
+            i.large-icons.fa.fa-eye
+         .row
+            p Modern look and feel, smooth and glossy and very easy on the eye overall
+      .col-md-2
+         .row
+            i.large-icons.fa.fa-archive
+         .row
+            p Compact comprehensive asset management software that removes need for multitudes of Excel sheets
+      .col-md-2
+         .row
+            i.large-icons.fa.fa-cube
+         .row
+            p Simplistic conceptual design. Exceptionally easy to learn, easier to use
+      .col-md-2
+         .row
+            i.large-icons.fa.fa-cogs
+         .row
+            p Powerful, intrinsically useful tool that fully meets all asset management needs
+
+   .row.tutorial-overview-icons
+      .col-md-2.col-md-offset-3
+         .row
+            i.large-icons.fa.fa-lock
+         .row
+            p Comprehensive software access and data security - Complete peace of mind
+      .col-md-2
+         .row
+            i.large-icons.fa.fa-globe
+         .row
+            p Completely location independent web-based application with seamless updates, bug fixes and upgrades
+      .col-md-2
+         .row
+            i.large-icons.fa.fa-code-fork
+         .row
+            p Under constant development and continued support. Think a feature would help? Suggest it to us!
+
+   .row.tutorial-overview-icons
+      .col-md-2.col-md-offset-2
+         .row
+            i.large-icons.fa.fa-database
+         .row
+            p Data-driven, with a large amount of data being captured to accurately depict each asset
+      .col-md-2
+         .row
+            i.large-icons.fa.fa-keyboard-o
+         .row
+            p Simple and elegant input forms, greatly simplifying the recording of assets
+      .col-md-2
+         .row
+            i.large-icons.fa.fa-percent
+         .row
+            p Up-to-standard depreciation handling and legislation complying asset depreciation procedures
+      .col-md-2
+         .row
+            i.large-icons.fa.fa-files-o
+         .row
+            p Comprehensive overview reports, with speciality reports in development. Request your own reports too! Export to Excel as well
+
+
+.row
+   .col-md-6.tutorial-start-div#getStarted
+      .col-md-10.col-md-offset-2
+         .row
+            h1.pageHeadings Getting Started
+         .row
+            a.tutorial-link(href="{{pathFor 'locations'}}" data-toggle='tooltip' title='To Locations')
+               i.fa.fa-globe
+            h2 Locations
+            p Location is a very important property to keep track of. After all, what good is an asset you misplaced somewhere in your organisation?
+            p Keeping this in mind, AM keeps track of all your company locations, and binds them to your assets. Thus, to store any assets, you have to record information about the locations relevant to your company.
+            p Locations are not deletable, but editable - This is due to the fact that some assets may already be linked to a certain location, and deleting it would cause major havoc in your database. An asset's location can be changed by updating the asset, but this will be covered at a later stage.
+            p Long story short - Save your locations, then your assets. Simple right?
+
+.row
+   .tutorial-asset-div#assets
+      .row
+         h1.pageHeadings The Assets
+      .row
+         a.tutorial-asset-link.tutorial-building(href="{{pathFor 'buildings'}}" data-toggle='tooltip' title='To Buildings')
+            i.fa.fa-building.fa-fw
+         a.tutorial-asset-link.tutorial-cellphone(href="{{pathFor 'cellphones'}}" data-toggle='tooltip' title='To Cell Phones')
+            i.fa.fa-mobile.fa-fw
+         a.tutorial-asset-link.tutorial-computer(href="{{pathFor 'computers'}}" data-toggle='tooltip' title='To Computers')
+            i.fa.fa-desktop.fa-fw
+         a.tutorial-asset-link.tutorial-furniture(href="{{pathFor 'furniture'}}" data-toggle='tooltip' title='To Furniture')
+            i.fa.fa-cubes.fa-fw
+         a.tutorial-asset-link.tutorial-machinery(href="{{pathFor 'machinery'}}" data-toggle='tooltip' title='To Machinery')
+            i.fa.fa-cogs.fa-fw
+         a.tutorial-asset-link.tutorial-tools(href="{{pathFor 'tools'}}" data-toggle='tooltip' title='To Tools')
+            i.fa.fa-wrench.fa-fw
+         a.tutorial-asset-link.tutorial-vehicle(href="{{pathFor 'vehicles'}}" data-toggle='tooltip' title='To Vehicles')
+            i.fa.fa-truck.fa-fw
+      .row
+         h2 And now on to the good stuff...
+      .row
+         .col-md-10.col-md-offset-1
+            p Now we are getting to what the asset manager is all about - the assets
+            p There are 7 types of assets stored, and one type of pseudo asset:
+         .col-md-2.col-md-offset-4
+            ul
+               li
+                  i.fa.fa-building
+                  h3 Buildings
+               li
+                  i.fa.fa-desktop
+                  h3 Computers
+               li
+                  i.fa.fa-cubes
+                  h3 Furniture
+               li
+                  i.fa.fa-wrench
+                  h3 Small Tools
+         .col-md-2
+            ul
+               li
+                  i.fa.fa-mobile
+                  h3 Cell Phones
+               li
+                  i.fa.fa-code-fork
+                  h3 Software
+               li
+                  i.fa.fa-cogs
+                  h3 Machinery
+               li
+                  i.fa.fa-truck
+                  h3 Vehicles
+      .tutorial-asset-descriptions
+         .row
+            .col-md-10.col-md-offset-1
+               .col-md-4
+                  i.fa.fa-building
+                  h2 Buildings
+                  p Your most costly assets.
+                  p There are 2 types of buildings: the normal and manufacturing building. When recording buildings you will have to choose which type of building each one falls under.
+                  p The key difference between them is in their purpose. The normal building can be anything from an apartment to an office building, while the manufacturing building can only be a factory, manufacturing or production plant. The only real difference this makes to how this asset is treated is in that the manufacturing building is subject to depreciation, while the normal building is not.
+               .col-md-4
+                  i.fa.fa-mobile
+                  h2 Cell Phones
+                  p Assets that are many and hard to keep track of.
+                  p Cell phones fall into one of 2 categories, namely a cell phone bound to a contract, and one that is not.
+                  p The key difference between them is that one will have information about its contract stored within it, and the other has no contract. This also makes a huge difference when recording each cell phone's monthly expenditures.
+               .col-md-4
+                  i.fa.fa-cubes
+                  h2 Furniture
+                  p All of your office furniture
+                  p Office furniture is very uncomplicated and storing it shouldn't be either. Just enter its information and there you go. Nothing more to really add to that.
+         .row
+            .col-md-10.col-md-offset-1
+               .col-md-4
+                  i.fa.fa-desktop
+                  h2 Computers
+                  p Your administrative machines
+                  p Computers are very fragile, but important assets. Despite this they are easy to keep track of with very little complicated in recording them.
+                  p Computers contain the pseudo-asset software, since each computer contains it own software
+               .col-md-4
+                  i.fa.fa-arrow-right.point(data-toggle='tooltip' title='Each computer contains its own software')
+               .col-md-4
+                  i.fa.fa-code-fork
+                  h2 Software
+                  p A pseudo-asset contained in computers
+                  p Software is a very complex thing, but a clear asset to every business. Software is installed on an individual computer, or on a server - which is a computer in itself. Despite its inherit complexity, keeping track of it is quite simple as well
+
+         .row
+            .col-md-10.col-md-offset-1
+               .col-md-4
+                  i.fa.fa-cogs
+                  h2 Plant Machinery
+                  p Large engines of mass production
+                  p The machines used in every factory and production plant, these assets are extremely important to every production company, as well as excruciatingly costly - second only to buildings.
+                  p Keeping track of the machine itself is quite simple and storing them in AM reflects that.
+               .col-md-4
+                  i.fa.fa-wrench
+                  h2 Small Tools
+                  p Small, but valuable tools
+                  p Tools are many in every production environment, and as such they make up a hefty chunk of a manufacturing company's assets.
+                  p Small tools can fall under 2 categories, those that has/ need to be calibrated and those that don't. This only affects if AM will be keeping track of past and future calibration dates of the asset for you.
+               .col-md-4
+                  i.fa.fa-truck
+                  h2 Vehicles
+                  p Invaluable transportation and movement assets
+                  p Vehicles are assets with some of the most unique attributes to keep track of. Though relatively simple to record and keep track of, some of their attributes may be confusing to the layman of asset management.
+
+.row
+   .tutorial-asset-details-div#icons
+      .row
+         h1.pageHeadings The Icons
+      .row
+         p Leaning any new thing can be a very daunting task.
+         p Luckily AM speaks in human, not computer, an aims to be as user-friendly and easy-to-learn as possible.
+         p Despite this we won't throw you into deep water. Here are some of the things you should know before diving in head-first:
+      .row
+         .col-md-10.col-md-offset-1.icons
+            .row
+               .col-md-4
+                  i.fa.fa-plus.point(data-toggle='tooltip' title='Add Record')
+                  p We all have seen this little symbol, whether from school or another program.
+                  p As it implies, this button will take you to a page where you can record a new asset.
+               .col-md-4
+                  i.fa.fa-line-chart.point(data-toggle='tooltip' title='Change asset type useful life')
+                  p This interesting little chart button may seem unclear at first, but that's why you're at the tutorial right?
+                  p This button takes you to a page where you can alter the asset category's useful life, which in turn changes its depreciation.
+                  p If an asset has a useful life of 4 years, it will depreciate by 25% per year - but don't worry too much about that. AM has got your back.
+               .col-md-4
+                  i.fa.fa-arrow-left.point(data-toggle='tooltip' title='Back to a previous page')
+                  p A very familiar button to all internet-going folk.
+                  p This is the back button, taking you away from the page you are on to a previous one.
+            .row
+               .col-md-4
+                  i.fa.fa-folder-open.point(data-toggle='tooltip' title='Add an asset category')
+                  p This button directs you to a page where you can view and manage a certain asset's category.
+                  p Since some asset, such as machinery, are very broad and diverse, we need to be able to add categories to properly record them.
+               .col-md-4
+                  i.fa.fa-floppy-o
+                  p While the older generation may remember this as the trusty floppy, it has since become the save button.
+                  p Following popular convention, AM has used this as it submit and save button.
+               .col-md-4
+                  i.fa.fa-eye
+                  p The eye is for revealing that which is not seen.
+                  p In this context, the eye button takes you to a page revealing the relevant asset's complete scope of attributes.
+            .row
+               .col-md-4
+                  i.fa.fa-pencil
+                  p The pen icon indicate the ability to edit a recorded asset.
+                  p This button takes you to a form where an asset's attributes can be changed when necessary
+               .col-md-4
+                  i.fa.fa-trash
+                  p All people know - or should know - what this little tool is used for.
+                  p This button allows your to delete a record when necessary.
+               .col-md-4
+                  i.fa.fa-sign-in
+                  p In case you overlooked this button when logging in:
+                  p This button submits your username and password to log you into AM
+            .row
+               .col-md-4.col-md-offset-2
+                  i.fa.fa-file-excel-o
+                  p The Excel file icon is located on all reports.
+                  p This button prints the report information to a .csv file to be used in Excel for further data modification as needed.
+               .col-md-4
+                  i.fa.fa-print
+                  p The printer icon should also be quite familiar, and is found on all reports.
+                  p This button converts the report into a printable format and fires an event to allow you to print the report out.
+
+.row.tutorial-space
+
+.row
+   .tutorial-asset-record-div#assetDetails
+      .row
+         h1.pageHeadings Assets in Detail
+      .row
+         .col-md-8.col-md-offset-2
+            p In this section we're taking an in depth look at the assets and their attributes to help you understand what exactly is being recorded and to help you provide the correct information.
+
+      .row
+         i.fa.fa-building
+      .row
+         h1.pageHeadings Buildings
+      .row
+         .col-md-10.col-md-offset-1
+            .row
+               .col-md-4
+                  h2 Building Name
+                  p The Name of the building as assigned by the owner.
+               .col-md-4
+                  h2 Property ID
+                  p The ID code of the property the building is locate on as assigned by the state.
+               .col-md-4
+                  h2 Purchase date
+                  p The Date of final purchase of the building.
+            .row
+               .col-md-4
+                  h2 Purchase Cost
+                  p The final agreed upon and paid purchase price.
+               .col-md-4
+                  h2 Location
+                  p The location the building is located as assigned by the owner.
+               .col-md-4
+                  h2 Description
+                  p A short description of the building with any additional comments about it.
+            .row.small-icons
+               .col-md-2.col-md-offset-1
+                  i.fa.fa-building
+                  h2 Normal
+                  p Option defining the building as a non-depreciating, non-manufacturing building.
+               .col-md-2
+                  i.fa.fa-industry
+                  h2 Manufacturing
+                  p Option defining the building as a depreciating, manufacturing building.
+               .col-md-2
+                  i.fa.fa-usd.moneyIcon
+                  h2 Revaluations
+                  p Directs you to the revaluations of the building - Physical valuations determining a building's current market value.
+               .col-md-2
+                  i.fa.fa-thumbs-up.positiveIcon
+                  h2 Improvements
+                  p Directs you to all of the building's recorded improvements.
+               .col-md-2
+                  i.fa.fa-thumbs-down.badIcon
+                  h2 Impairments
+                  p Directs you to all of the building's recorded impairments.
+
+      .row
+         i.fa.fa-mobile
+      .row
+         h1.pageHeadings Cell Phones
+      .row
+         .col-md-10.col-md-offset-1
+            .row
+               .col-md-3
+                  h2 Invoice number
+                  p The invoice number received on the purchase of the cell phone - if none is provided "No Invoice" is recorded as the invoice number.
+               .col-md-3
+                  h2 Purchase Order
+                  p The purchase order your company issued for the purchase of the cell phone - if none is provided "No Purchase Order" is recorded as the purchase order number.
+               .col-md-3
+                  h2 Purchase Cost
+                  p The cost of purchasing the cell phone.
+               .col-md-3
+                  h2 Supplier
+                  p The organisation you purchased the cell phone from.
+            .row
+               .col-md-3
+                  h2 Manufacturer
+                  p The manufacturer who made the cell phone.
+               .col-md-3
+                  h2 Model
+                  p The model name of the cell phone.
+               .col-md-3
+                  h2 Purchase Date
+                  p The date you purchased the cell phone on.
+               .col-md-3
+                  h2 Warranty Expiration
+                  p The date on which the cell phone's warranty will expire - Warranty will be reworked in the coming weeks.
+            .row
+               .col-md-3
+                  h2 Cell Number
+                  p The number you would call to reach the cell phone.
+               .col-md-3
+                  h2 User
+                  p The full name of the person who will be using the cell phone primarily.
+               .col-md-3
+                  h2 Location
+                  p The location where the user is primarily posted.
+               .col-md-3
+                  h2 PIN
+                  p The PIN number used to unlock the cell phone.
+            .row
+               .col-md-3
+                  h2 PUK
+                  pThe PUK number used to unlock a PIN-locked cell phone.
+               .col-md-3
+                  h2 SIM
+                  p The identification number of the cell phone's SIM.
+               .col-md-3
+                  h2 Description
+                  p A short description of the cell phone with any additional comments about it.
+               .col-md-3
+                  h2 Contract Start/End
+                  p The start and end date of the cell phone's contract - if it has one.
+            .row.small-icons
+               .col-md-4
+                  i.fa.fa-file.goodIcon
+                  h2 Contract
+                  p Option defining the cell phone as one with a contract.
+               .col-md-4
+                  i.fa.fa-file.badIcon
+                  h2 No Contract
+                  p Option defining the cell phone as one without a contract.
+               .col-md-4
+                  i.fa.fa-calendar.positiveIcon
+                  h2 Cell Phone Monthlies
+                  p Directs you to all of the cell phone's recorded monthlies.
+
+      .row
+         i.fa.fa-desktop
+      .row
+         h1.pageHeadings Computers
+      .row
+         .col-md-10.col-md-offset-1
+            .row
+               .col-md-3
+                  h2 Invoice number
+                  p The invoice number received on the purchase of the computer - if none is provided "No Invoice" is recorded as the invoice number0
+               .col-md-3
+                  h2 Purchase Order
+                  p The purchase order your company issued for the purchase of the computer - if none is provided "No Purchase Order" is recorded as the purchase order number0
+               .col-md-3
+                  h2 Purchase Cost
+                  p The cost of purchasing the computer0
+               .col-md-3
+                  h2 Supplier
+                  p The organisation you purchased the computer from0
+            .row
+               .col-md-3
+                  h2 Manufacturer
+                  p The manufacturer who made the computer0
+               .col-md-3
+                  h2 Model
+                  p The model name of the computer0
+               .col-md-3
+                  h2 Location
+                  p The location where the user is primarily posted0
+               .col-md-3
+                  h2 Serial Number
+                  p The serial number that uniquely identifies the computer0
+            .row
+               .col-md-3
+                  h2 User
+                  p The full name of the person who will be using the computer primarily0
+               .col-md-3
+                  h2 Purchase Date
+                  p The date you purchased the computer on0
+               .col-md-3
+                  h2 Warranty Expiration
+                  p The date on which the computer's warranty will expire - Warranty will be reworked in the coming weeks.
+               .col-md-3
+                  h2 Description
+                  p A short description of the computer with any additional comments about it.
+            .row.small-icons
+               .col-md-12
+                  i.fa.fa-code-fork.positiveIcon
+                  h2 Software
+                  p Directs you to all of the computer's software0
+
+      .row
+         i.fa.fa-cubes
+      .row
+         h1.pageHeadings Furniture
+      .row
+         .col-md-10.col-md-offset-1
+            .row
+               .col-md-3
+                  h2 Invoice number
+                  p The invoice number received on the purchase of the furniture - if none is provided "No Invoice" is recorded as the invoice number.
+               .col-md-3
+                  h2 Purchase Order
+                  p The purchase order your company issued for the purchase of the furniture - if none is provided "No Purchase Order" is recorded as the purchase order number.
+               .col-md-3
+                  h2 Purchase Cost
+                  p The cost of purchasing the furniture.
+               .col-md-3
+                  h2 Supplier
+                  p The organisation you purchased the furniture from.
+            .row
+               .col-md-3
+                  h2 Manufacturer
+                  p The manufacturer who made the furniture.
+               .col-md-3
+                  h2 Model
+                  p The model name of the furniture.
+               .col-md-3
+                  h2 Location
+                  p The location where the furniture is primarily posted.
+               .col-md-3
+                  h2 Office
+                  p The office number where the furniture will be used.
+            .row
+               .col-md-3
+                  h2 User
+                  p The full name of the person who will be using the furniture primarily.
+               .col-md-3
+                  h2 Purchase Date
+                  p The date you purchased the furniture on.
+               .col-md-3
+                  h2 Warranty Expiration
+                  p The date on which the furniture's warranty will expire - Warranty will be reworked in the coming weeks.
+               .col-md-3
+                  h2 Description
+                  p A short description of the furniture with any additional comments about it.
+
+      .row
+         i.fa.fa-cogs
+      .row
+         h1.pageHeadings Machinery
+      .row
+         .col-md-10.col-md-offset-1
+            .row
+               .col-md-3
+                  h2 Invoice number
+                  p The invoice number received on the purchase of the machine - if none is provided "No Invoice" is recorded as the invoice number.
+               .col-md-3
+                  h2 Purchase Order
+                  p The purchase order your company issued for the purchase of the machine - if none is provided "No Purchase Order" is recorded as the purchase order number.
+               .col-md-3
+                  h2 Purchase Cost
+                  p The cost of purchasing the machine.
+               .col-md-3
+                  h2 Category
+                  p The type of the machine - directly affect the machine's depreciation rate.
+            .row
+               .col-md-3
+                  h2 Supplier
+                  p The organisation you purchased the machine from.
+               .col-md-3
+                  h2 Manufacturer
+                  p The manufacturer who made the machine.
+               .col-md-3
+                  h2 Model
+                  p The model name of the machine.
+               .col-md-3
+                  h2 Location
+                  p The location where the machine is primarily posted.
+            .row
+               .col-md-3
+                  h2 Serial Number
+                  p The serial number that uniquely identifies the machine.
+               .col-md-3
+                  h2 User
+                  p The full name of the person who will be using the machine primarily.
+               .col-md-3
+                  h2 Purchase Date
+                  p The date you purchased the machine on.
+               .col-md-3
+                  h2 Warranty Expiration
+                  p The date on which the machine's warranty will expire - Warranty will be reworked in the coming weeks.
+            .row
+               .col-md-4.col-md-offset-4
+                  h2 Description
+                  p A short description of the machine with any additional comments about it.
+
+            .row.small-icons
+               .col-md-3.col-md-offset-3
+                  i.fa.fa-folder-open.moneyIcon
+                  h2 Machine Categories
+                  p Directs you to all of the machine categories.
+               .col-md-3
+                  i.fa.fa-calendar.positiveIcon
+                  h2 Machine Monthlies
+                  p Directs you to all of the machine's monthlies.
+
+      .row
+         i.fa.fa-wrench
+      .row
+         h1.pageHeadings Small Tools
+      .row
+         .col-md-10.col-md-offset-1
+            .row
+               .col-md-3
+                  h2 Invoice number
+                  p The invoice number received on the purchase of the tool - if none is provided "No Invoice" is recorded as the invoice number.
+               .col-md-3
+                  h2 Purchase Order
+                  p The purchase order your company issued for the purchase of the tool - if none is provided "No Purchase Order" is recorded as the purchase order number.
+               .col-md-3
+                  h2 Purchase Cost
+                  p The cost of purchasing the tool.
+               .col-md-3
+                  h2 Category
+                  p The type of the tool - directly affect the machine's depreciation rate.
+            .row
+               .col-md-3
+                  h2 Supplier
+                  p The organisation you purchased the tool from.
+               .col-md-3
+                  h2 Manufacturer
+                  p The manufacturer who made the tool.
+               .col-md-3
+                  h2 Model
+                  p The model name of the tool.
+               .col-md-3
+                  h2 Location
+                  p The location where the tool is primarily posted.
+            .row
+               .col-md-3
+                  h2 Serial Number
+                  p The serial number that uniquely identifies the tool.
+               .col-md-3
+                  h2 Purchase Date
+                  p The date you purchased the tool on.
+               .col-md-3
+                  h2 Warranty Expiration
+                  p The date on which the tool's warranty will expire - Warranty will be reworked in the coming weeks.
+               .col-dm-3
+                  h2 Description
+                  p A short description of the tool with any additional comments about it.
+            .row
+               .col-md-4
+                  h2 Certification Number
+                  p The certification number of the calibrated tool.
+               .col-md-4
+                  h2 Calibration Date
+                  p The date the tool was calibrated on.
+               .col-md-4
+                  h2 Recalibration Date
+                  p The date the tool has to be re-calibrated.
+
+            .row.small-icons
+               .col-md-4
+                  i.fa.fa-folder-open.moneyIcon
+                  h2 Tool Categories
+                  p Directs you to all of the small tool categories
+               .col-md-4
+                  i.fa.fa-cog.goodIcon
+                  h2 Calibrated Tool
+                  p Indicates that the tool has been, or needs to be, calibrated
+               .col-md-4
+                  i.fa.fa-cog.badIcon
+                  h2 Un-Calibrated Tool
+                  p Indicates that the tool doesn't require calibration
+
+      .row
+         i.fa.fa-truck
+      .row
+         h1.pageHeadings Vehicles
+      .row
+         .col-md-10.col-md-offset-1
+            .row
+               .col-md-3
+                  h2 Invoice number
+                  p The invoice number received on the purchase of the vehicle - if none is provided "No Invoice" is recorded as the invoice number.
+               .col-md-3
+                  h2 Purchase Order
+                  p The purchase order your company issued for the purchase of the vehicle - if none is provided "No Purchase Order" is recorded as the purchase order number.
+               .col-md-3
+                  h2 Purchase Cost
+                  p The cost of purchasing the vehicle.
+               .col-md-3
+                  h2 Category
+                  p The type of the vehicle - directly affect the machine's depreciation rate.
+            .row
+               .col-md-3
+                  h2 Supplier
+                  p The organisation you purchased the vehicle from.
+               .col-md-3
+                  h2 Manufacturer
+                  p The manufacturer who made the vehicle.
+               .col-md-3
+                  h2 Model
+                  p The model name of the vehicle.
+               .col-md-3
+                  h2 Location
+                  p The location where the vehicle is primarily posted.
+            .row
+               .col-md-3
+                  h2 License Plate Number
+                  p The serial number that uniquely identifies the vehicle.
+               .col-md-3
+                  h2 Purchase Date
+                  p The date you purchased the vehicle on.
+               .col-md-3
+                  h2 Warranty Expiration
+                  p The date on which the vehicle's warranty will expire - Warranty will be reworked in the coming weeks.
+               .col-dm-3
+                  h2 Description
+                  p A short description of the vehicle with any additional comments about it.
+            .row
+               .col-md-4
+                  h2 Vehicle Identification Number
+                  p The VIN of the vehicle - usually located on the body.
+               .col-md-4
+                  h2 Engine Identification Number
+                  p The engine number of the vehicle - located on the engine.
+               .col-md-4
+                  h2 Odometer Reading
+                  p The vehicle's current odometer reading..
+
+            .row.small-icons
+               .col-md-3.col-md-offset-3
+                  i.fa.fa-folder-open.moneyIcon
+                  h2 Vehicle Categories
+                  p Directs you to all of the vehicle categories.
+               .col-md-3
+                  i.fa.fa-calendar.positiveIcon
+                  h2 Vehicle Monthlies
+                  p Directs you to all of the vehicle's monthlies.
+
+.row.tutorial-report-div#report-detail
+   .row
+      h1.pageHeadings Reports
+   .row
+      .col-md-10.col-md-offset-1
+         .row
+            .col-md-6.col-md-offset-3
+               p As we all know - data drives the business world. This fact has made reporting the incredibly important and powerful tool that it is today and AM aims to use it to its full extent to provide you with detailed reports as well as greatly simplified ones, giving you a close up view, as well as an overview of your organisation's assets.
+         .row
+            h1.pageHeadings Report Types
+         .row
+            .col-md-3
+               h2 Asset Overview Report
+               p Provides an overview of the number of assets in each category, the total purchase price of those assets and their total depreciation and remaining book value.
+            .col-md-3
+               h2 Building Overview Report
+               p Provides a list of all buildings, their names, status, date of purchase, purchase cost and their current value.
+            .col-md-3
+               h2 Cell Phone Overview Report
+               p Provides a list of all cell phones, their number, user, status, manufacturer and model, purchase date and purchase cost.
+            .col-md-3
+               h2 Computer Overview Report
+               p Provides a list of all computers, their serial number, user, status, manufacturer and model, purchase date and purchase cost.
+         .row
+            .col-md-3
+               h2 Furniture Overview Report
+               p Provides a list of all furniture pieces, their office, user, status, manufacturer and model, purchase date and purchase cost.
+            .col-md-3
+               h2 Machinery Overview Report
+               p Provides a list of all machinery, their serial number, category name, status, manufacturer and model, purchase date and purchase cost.
+            .col-md-3
+               h2 Small Tools Overview Report
+               p Provides a list of all small tools, their serial number, category name, status, manufacturer and model, purchase date and purchase cost.
+            .col-md-3
+               h2 Vehicles Overview Report
+               p Provides a list of all vehicles, their licence plate number, category name, status, manufacturer and model, purchase date and purchase cost.
+
+         .row
+            h1.pageHeadings Make Your Own Reports
+         .row
+            .col-md-6.col-md-offset-3
+               h2 Coming soon
+               p  AM allows you to "pull" all of the data from each category into .CSV files. From this data you can create you own reports in Excel - For reports you may need that AM doesn't provide.
+
+         .row
+            h1.pageHeadings A Note on .CSV Files
+         .row
+            p .CSV files are text files that have their values separated by a delimiter(a symbol such as a , or ;) Which allows Excel to determine which values to put in next columns.
+            p You can open these files in Excel to further manipulate data. You can open them in one of 2 ways:
+         .row
+            .col-md-4.col-md-offset-2
+               h2.csv-numbers 1
+               p If your regional delimiter settings are in order, you should be(Excel doesn't always play well with .csv files) able to right click the file > select open with... > and choose Excel
+               p To check your regional delimiter settings, go to control panel > region > Additional settings(Bottom right corner of the panel)
+               p This should open the text file converter in Excel. From this panel you can choose if your .csv has headings(all AM's .csv files have headings), set the separator symbol as , and have Excel throw your fields into their respective columns
+            .col-md-4
+               h2.csv-numbers 2
+               p If Option 1 fails, you can go into Excel itself > click the "DATA" tab > select "From Text" > open your desired .csv file and choose your settings for importation there,
+
+script.
+   $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+   });

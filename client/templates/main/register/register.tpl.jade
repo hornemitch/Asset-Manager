@@ -1,0 +1,25 @@
+if isAdmin
+    form.template-body.register-form
+        .row
+            .col-md-3
+                h2 Username
+            .col-md-3
+                h2 Password
+            .col-md-3
+                h2 Adminastrator Password
+            .col-md-3
+                h2 Company
+        .row
+            .col-md-3
+                input(type='text' name='name' autocomplete='off' required)
+            .col-md-3
+                input(type='password' name='pass' required)
+            .col-md-3
+                input(type='password' name='adminPass')
+            .col-md-3
+                select
+                    each company
+                        option(value='_id') #{coName}
+        .row
+            .col-md-2.col-md-offset-5
+                input.inputButtons.editButton(type='submit' value='Create user')

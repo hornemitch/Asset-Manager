@@ -1,0 +1,25 @@
+.template-body.frontPage
+    h1.pageHeadings Argent Deux
+    .row
+        .col-md-6.col-md-offset-3
+            form.login-form
+                .row
+                    h2 Log in
+                .row
+                    .col-md-4
+                        h2.inputHeadings Username
+                    .col-md-8
+                        input.inputFields(type='text' name='userN' autocomplete='off' required placeholder='Please enter your user name')
+                .row
+                    .col-md-4
+                        h2.inputHeadings Password
+                    .col-md-8
+                        input.inputFields(type='password' name='pass' required placeholder='Please enter your password')
+                .row
+                    button.loginButton(type=input data-toggle="tooltip" title="Log in")
+                        i.fa.fa-sign-in
+
+script.
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });

@@ -1,0 +1,26 @@
+.template-body
+    .row
+        h1.pageHeadings Update Machine Category
+    form.machine-category-edit-form.input-form
+        .row
+            .col-md-4.col-md-offset-2
+                h2.inputHeadings Category Name
+            .col-md-4
+                h2.inputHeadings Useful Life
+        .row
+            .col-md-4.col-md-offset-2
+                input.inputFields(type='text' autocomplete='off' onclick='this.select()' name='categoryName' value='#{name}')
+            .col-md-4
+                input.inputFields(type='text' autocomplete='off' onclick='this.select()' name='usefulLife' value='#{usefulLife}')
+
+        .row.button-row
+            hr
+            a.backButton(href='{{pathFor "machine.category"}}' data-toggle="tooltip" title="Back to Machine Categories")
+                i.fa.fa-arrow-left
+            button.saveButton(type='input' data-toggle="tooltip" title="Update Machine Category")
+                i.fa.fa-floppy-o
+
+script.
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });

@@ -1,0 +1,15 @@
+form.template-body.pass-reset
+   if notAdmin
+      h4 #{username}
+      if changePass
+         h4 New Password
+         input(type='text' name='pass')
+         .row
+         input(type='submit' value='Reset Password')
+         .row
+         Button.notChange Don't Change Password
+         .row
+      else
+         Button.changePassword Change Password
+      .row
+         Button.deleteAccount Delete User

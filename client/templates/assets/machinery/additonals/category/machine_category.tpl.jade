@@ -1,0 +1,11 @@
+.template-body
+   .row
+      h1.pageHeadings Machine Categories
+   .row
+      a.table-back-button-2(href='{{pathFor "machinery"}}' data-toggle="tooltip" title="Back to Machinery")
+         i.fa.fa-arrow-left
+      a.table-add-button-2(href='{{pathFor "machine.category.create"}}' data-toggle="tooltip" title="Add Machine Category")
+         i.fa.fa-plus
+   .row
+      .col-md-10.col-md-offset-1
+         |   {{> tabular table=TabularTables.Machine_Category selector=selector class="table-bordered"}}

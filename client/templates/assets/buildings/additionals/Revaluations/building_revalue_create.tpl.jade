@@ -1,0 +1,28 @@
+.template-body
+   .row
+      h1.pageHeadings Add Revaluation of Building
+   form.revaluation-form.input-form
+      .row
+         h2.assetName(data-toggle='tooltip' title='Building Name') #{buildingName}
+      .row
+         .col-md-3.col-md-offset-3
+            h2.inputHeadings New Value
+         .col-md-3
+            h2.inputHeadings Date Of Revaluation
+      .row
+         .col-md-3.col-md-offset-3
+               input.inputFields(type="number" autocomplete="off" name="value" step='0.01' placeholder='Enter New Building Value')
+         .col-md-3
+            input.inputFields.point#datepicker(type="text" autocomplete="off" name="dateOfRevalue")
+
+      .row.button-row
+         hr
+         a.backButton(href='{{pathFor "building.revalue"}}' data-toggle="tooltip" title="Back to Revaluations")
+            i.fa.fa-arrow-left
+         button.saveButton(type='submit' data-toggle="tooltip" title="Save Revaluation")
+            i.fa.fa-floppy-o
+
+script.
+  $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+  });

@@ -1,0 +1,57 @@
+.template-body
+    if imagesLoaded
+        if userLoggedIn
+            .row
+                h1.pageHeadings  Welcome #{getUser}
+
+            script.
+                $(document).ready(function () {
+                    $('[data-toggle="tooltip"]').tooltip();
+                });
+
+            if isAdmin
+                .row
+                    .col-md-2.col-md-offset-5
+                        button.createUsefulLives Create Useful Lives
+                script.
+                    $(document).ready(function () {
+                        $('[data-toggle="tooltip"]').tooltip();
+                    });
+            else
+                .row.home-blocks
+                    .tutorial-block.col-md-4.col-md-offset-2
+                        .row
+                            h3 Instruct Me Please!
+                            h4 Jumping straight into AM is easy, but walking in confidently, knowing what to expect, is definitely preferable
+                            h4 Being very user friendly, AM is easy to learn and with a comprehensive tutorial it makes it even easier
+                        a.tutorial-icon(href='{{pathFor "tutorial"}}' data-toggle="tooltip" title="To Tutorial")
+                            i.fa.fa-book
+                    .no-tutorial-block.col-md-4
+                        .row
+                            h3 I Need No Direction!
+                            h4 For those who have no need for idle learning experiences such as tutorials, jumping straight into AM is also a viable option
+                            h4 You could always go back to the tutorial later. Only to look at its craftsmanship, of course...
+                        a.no-tutorial-icon(href='{{pathFor "locations"}}' data-toggle="tooltip" title="To Locations")
+                            i.fa.fa-reply-all.fa-flip-horizontal
+
+        else
+            .row
+                h1.pageHeadings Argent Deux
+            .row
+                .col-md-8.col-md-offset-2
+                    h3 You are not currently logged in. Please follow the link below to log in
+                .col-md-2.col-md-offset-5
+                    a(href='{{pathFor "login"}}')
+                        i.fa.fa-sign-in.loginButton.goodIcon(data-toggle='tooltip' title='Log in Here')
+
+            script.
+                $(document).ready(function () {
+                    $('[data-toggle="tooltip"]').tooltip();
+                });
+
+    else
+        #busy-holder
+            #busy
+                i.busy-icon.fa.fa-spinner.fa-pulse
+                p.busy-text-1 Please be patient
+                p.busy-text-2 Everything is being prepared for your use

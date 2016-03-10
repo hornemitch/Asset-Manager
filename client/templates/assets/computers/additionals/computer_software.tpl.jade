@@ -1,0 +1,19 @@
+.template-body
+    .row
+        h1.pageHeadings Computer Software
+    .row
+        h2.assetName(data-toggle='tooltip' title='Computer Serial Number') #{serialNumber}
+    .row
+        a.table-back-button-1(href='{{pathFor "computers"}}' data-toggle="tooltip" title="Back to Computers")
+            i.fa.fa-arrow-left
+        a.table-add-button-1(href='{{pathFor "computer.software.add"}}' data-toggle="tooltip" title="Add Computer Software")
+            i.fa.fa-plus
+        a.table-category-button-2(href='{{pathFor "computer.software.life"}}' data-toggle="tooltip" title="Change Useful Life")
+            i.fa.fa-line-chart
+    .row
+        |   {{> tabular table=TabularTables.ComputerSoftware selector=selector class="table-bordered"}}
+
+script.
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });

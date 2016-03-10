@@ -1,0 +1,91 @@
+.template-body
+   .row
+      h1.pageHeadings Small Tool Details
+   .row
+      .detail-div
+         table.table-bordered
+            tbody
+               tr
+                  th.col-md-12.centered Main Information
+         table.table-bordered
+            tbody
+               tr
+                  th Asset Number
+                  th Serial Number
+                  th Category
+                  th Status
+                  th Location
+               tr
+                  td.td-words #{assetNumber}
+                  td.td-words #{serialNumber}
+                  td.td-words #{categoryName}
+                  td.td-words #{status}
+                  td.td-words #{locate}
+         table.table-bordered
+            tbody
+               tr
+                  th.col-md-12.centered Financial Information
+         table.table-bordered
+            tbody
+               tr
+                  th.col-md-2 Invoice Number
+                  th.col-md-2 Purchase Order
+                  th.col-md-2 Purchase Date
+                  th.col-md-2 Purchase Price
+                  th.col-md-2 Depreciation Rate
+                  th.col-md-22 Book Value
+               tr
+                  td.col-md-2.td-words #{invoiceNumber}
+                  td.col-md-2.td-words #{purchaseOrderNumber}
+                  td.col-md-2.td-words #{purchaseDate}
+                  td.col-md-2.td-words R #{showValue costPrice}
+                  td.col-md-2.td-words #{decDep}% p/a
+                  td.col-md-2.td-words R #{showValue bookValue}
+         table.table-bordered
+            tbody
+               tr
+                  th.col-md-12.centered Small Tool Information
+         table.table-bordered
+            tbody
+               if isCalibrated
+                  tr
+                     th.col-md-2 Supplier
+                     th.col-md-2 Manufacturer
+                     th.col-md-2 Model
+                     th.col-md-2 Warranty Expiration
+                     th.col-md-2 Calibration Date
+                     th.col-md-2 Certification Number
+                  tr
+                     td.col-md-2.td-words #{supplier}
+                     td.col-md-2.td-words #{manufacturer}
+                     td.col-md-2.td-words #{model}
+                     td.col-md-2.td-words #{warrantyExpiration}
+                     td.col-md-2.td-words #{calibrationDate}
+                     td.col-md-2.td-words #{certificationNumber}
+               else
+                  tr
+                     th.col-md-3 Supplier
+                     th.col-md-3 Manufacturer
+                     th.col-md-3 Model
+                     th.col-md-3 Warranty Expiration
+                  tr
+                     td.col-md-3.td-words #{supplier}
+                     td.col-md-3.td-words #{manufacturer}
+                     td.col-md-3.td-words #{model}
+                     td.col-md-3.td-words #{warrantyExpiration}
+         table.table-bordered
+            tbody
+               tr
+                  th.col-md-4 Description
+                  td.col-md-8.td-words #{description}
+
+   .row
+      a.detailIcons.backButton(href='{{pathFor "tools"}}' data-toggle="tooltip" title="Back to Tools")
+         i.fa.fa-arrow-left
+      a.detailIcons.editIcon(href='{{pathFor "tool.edit"}}' data-toggle="tooltip" title="Update")
+         i.fa.fa-pencil
+
+script.
+   $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+   });

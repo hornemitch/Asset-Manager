@@ -1,0 +1,12 @@
+if isAdmin
+   form.template-body.register-company-form
+      .row
+         .col-md-3
+            h2 Company Name
+            input(type='text' name='coName' autocomplete='off' required)
+      .row
+         .col-md-3
+            input.inputButtons.editButton(type='submit' value='Create Company')
+            ul
+               each company
+                  li #{coName}

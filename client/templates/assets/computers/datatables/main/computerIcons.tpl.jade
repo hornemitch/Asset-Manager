@@ -1,0 +1,14 @@
+.icon-template
+    a.goodIcon(href='{{pathFor "computer.detail"}}' data-toggle="tooltip" title="View Details")
+        i.fa.fa-eye
+    a.editIcon(href='{{pathFor "computer.edit"}}' data-toggle="tooltip" title="Update")
+        i.fa.fa-pencil
+    a.positiveIcon(href='{{pathFor "computer.software"}}' data-toggle="tooltip" title="Software")
+        i.fa.fa-code-fork
+    a.removeButton.trashIcon(href='#' data-toggle="tooltip" title="Delete")
+        i.fa.fa-trash
+
+script.
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });

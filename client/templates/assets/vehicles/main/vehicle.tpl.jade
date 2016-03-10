@@ -1,0 +1,28 @@
+.template-body
+   if hasLocations
+      h1.pageHeadings Vehicles
+      .row
+         a.table-category-button(href='{{pathFor "vehicle.category"}}' data-toggle="tooltip" title="Categories")
+            i.fa.fa-folder-open
+         if hasCategory
+            a.table-add-button-1(href='{{pathFor "vehicle.create"}}' data-toggle="tooltip" title="Add Vehicle")
+               i.fa.fa-plus
+            script.
+               $(document).ready(function () {
+                  $('[data-toggle="tooltip"]').tooltip();
+                  });
+      .row
+         |   {{> tabular table=TabularTables.Vehicles selector=selector class="table-bordered"}}
+
+   else
+      h1 No Location Saved
+      .col-md-8.col-md-offset-2
+         h3 You cannot store assets if you don't have at least one location to tie the asset to. Please create a location first
+      .col-md-2.col-md-offset-5
+         a(href='{{pathFor "locations"}}')
+            button.inputButtons Locations
+
+script.
+   $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+   });

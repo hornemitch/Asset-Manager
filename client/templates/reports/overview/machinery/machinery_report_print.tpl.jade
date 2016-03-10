@@ -1,0 +1,60 @@
+.template-body
+    .row
+        h1.pageHeadings Machinery Overview Report
+    .row
+        table.table-bordered.report-table
+            tr
+                th.report-center Asset Number
+                th.report-center Serial Number
+                th.report-center Category
+                th.report-center Status
+                th.report-center Manufacturer
+                th.report-center Model
+                th.report-center Purchase Date
+                th.report-center Purchase Price
+            each machinery
+                tr
+                    td
+                        p.tableTitles #{assetNumber}
+                    td
+                        p.tableTitles #{serialNumber}
+                    td
+                        p.tableTitles #{machineCategory category}
+                    td
+                        p.tableTitles #{status}
+                    td
+                        p.tableTitles #{manufacturer}
+                    td
+                        p.tableTitles #{model}
+                    td
+                        p.tableTitles #{purchaseDate}
+                    td
+                        p.currency R
+                        p.amount #{showValue costPrice}
+            tr
+                td
+                    b
+                        p.report-center Totals
+                td
+                    b
+                        p.report-center #{machineryCount} Machines
+                td
+                    p.report-center -
+                td
+                    p.report-center -
+                td
+                    p.report-center -
+                td
+                    p.report-center -
+                td
+                    p.report-center -
+                td
+                    b
+                        p.currency R
+                    b
+                        p.amount #{showValue machineryCost}
+
+script.
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });

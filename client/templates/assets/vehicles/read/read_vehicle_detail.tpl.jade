@@ -1,0 +1,83 @@
+.template-body
+    .row
+        h1.pageHeadings Vehicle Details
+    .row
+        .detail-div
+            table.table-bordered
+                tbody
+                    tr
+                        th.col-md-12.centered Main Information
+            table.table-bordered
+                tbody
+                    tr
+                        th Asset Number
+                        th Licence Plate Number
+                        th VI Number
+                        th Category
+                        th Location
+                        th Status
+                    tr
+                        td.col-md-2.td-words #{assetNumber}
+                        td.col-md-2.td-words #{licencePlate}
+                        td.col-md-2.td-words #{VIN}
+                        td.col-md-2.td-words #{categoryName}
+                        td.col-md-2.td-words #{location}
+                        td.col-md-2.td-words #{status}
+            table.table-bordered
+                tbody
+                    tr
+                        th.col-md-12.centered Financial Information
+            table.table-bordered
+                tbody
+                    tr
+                        th.col-md-2 Invoice Number
+                        th.col-md-2 Purchase Order
+                        th.col-md-2 Purchase Date
+                        th.col-md-2 Purchase Price
+                        th.col-md-2 Dereciation Rate
+                        th.col-md-2 Book Value
+                    tr
+                        td.col-md-2.td-words #{invoiceNumber}
+                        td.col-md-2.td-words #{purchaseOrderNumber}
+                        td.col-md-2.td-words #{purchaseDate}
+                        td.col-md-2.td-words R #{showValue costPrice}
+                        td.col-md-2.td-words #{decDep}% p/a
+                        td.col-md-2.td-words R #{showValue bookValue}
+            table.table-bordered
+                tbody
+                    tr
+                        th.col-md-12.centered Machine Information
+            table.table-bordered
+                tbody
+                    tr
+                        th Supplier
+                        th Manufacturer
+                        th Model
+                        th Engine Number
+                        th Warranty Expiration
+                        th Odometer Reading
+                    tr
+                        td.col-md-2.td-words #{supplier}
+                        td.col-md-2.td-words #{manufacturer}
+                        td.col-md-2.td-words #{model}
+                        td.col-md-2.td-words #{engineNumber}
+                        td.col-md-2.td-words #{warrantyExpiration}
+                        td.col-md-2.td-words #{showValue odometerCurrent} KM
+            table.table-bordered
+                tbody
+                    tr
+                        th.col-md-4 Description
+                        td.col-md-8.td-words #{description}
+
+    .row
+        a.detailIcons.backButton(href='{{pathFor "vehicles"}}' data-toggle="tooltip" title="Back to Vehicles")
+            i.fa.fa-arrow-left
+        a.detailIcons.editIcon(href='{{pathFor "vehicle.edit"}}' data-toggle="tooltip" title="Update")
+            i.fa.fa-pencil
+        a.detailIcons.positiveIcon(href='{{pathFor "vehicle.daily"}}' data-toggle="tooltip" title="Dailies")
+            i.fa.fa-files-o
+
+script.
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });

@@ -1,0 +1,73 @@
+.template-body
+   .row
+      h1.pageHeadings Add Computer Software
+   form.computer-software-form.input-form
+      .row
+         h2.assetName(data-toggle='tooltip' title='Computer Serial Number') #{serialNumber}
+      .row
+         .col-md-3
+            h2.inputHeadings Name
+         .col-md-3
+            h2.inputHeadings Licence Key
+         .col-md-3
+            h2.inputHeadings Invoice Number
+         .col-md-3
+            h2.inputHeadings Purchase Order Number
+      .row
+         .col-md-3
+            input.inputFields(type='text' name='name' autocomplete='off' placeholder='Enter Software Name')
+         .col-md-3
+            input.inputFields(type='text' name='licenceKey' autocomplete='off' placeholder='Enter Licence Key')
+         .col-md-3
+            input.inputFields(type='text' name='invoiceNumber' autocomplete='off' placeholder='Enter Invoice Number')
+         .col-md-3
+            input.inputFields(type='text' name='purchaseOrder' autocomplete='off' placeholder='Enter Purchase Order')
+      .row
+         .col-md-3
+            h2.inputHeadings Purchase Cost
+         .col-md-3
+            h2.inputHeadings Acquired Date
+         .col-md-3
+            h2.inputHeadings Licence Renewal
+         .col-md-3
+            h2.inputHeadings Supplier
+      .row
+         .col-md-3
+            input.inputFields(type='number' name='purchaseCost' step='0.01' placeholder='Enter Purchase Cost')
+         .col-md-3
+            input.inputFields.point#date2(type='text' name='acquiredDate')
+         .col-md-3
+            input.inputFields.point#date1(type='text' name='licenceRenewalDate')
+         .col-md-3
+            input.inputFields(type='text' name='supplier' autocomplete='off' placeholder='Enter Supplier Name')
+      .row
+         .col-md-3
+            h2.inputHeadings Developer
+         .col-md-3
+            h2.inputHeadings Description
+         .col-md-1
+            h2.inputHeadings Installed
+      .row
+         .col-md-3
+            input.inputFields(type='text' name='developer' autocomplete='off' placeholder='Enter Developer Name')
+         .col-md-3
+            textarea.inputFields(rows='3' name='description' autocomplete='off' placeholder='Describe the Software')
+         .col-md-1
+            if isInstalled
+               a.detailIcons.notInstalled.point
+                  i.fa.fa-check.positiveIcon
+            else
+               a.detailIcons.installed.point
+                  i.fa.fa-times.badIcon
+
+      .row.button-row
+         hr
+         a.backButton(href='{{pathFor "computer.software"}}' data-toggle="tooltip" title="Back to Software")
+            i.fa.fa-arrow-left
+         button.saveButton(type='input' data-toggle="tooltip" title="Save Computer Software")
+            i.fa.fa-floppy-o
+
+script.
+   $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+   });

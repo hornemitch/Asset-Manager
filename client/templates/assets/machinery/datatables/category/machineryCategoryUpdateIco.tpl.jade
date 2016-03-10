@@ -1,0 +1,8 @@
+.icon-template
+    a.editIcon(href='{{pathFor "machine.category.edit"}}' data-toggle="tooltip" title="Update")
+        i.fa.fa-pencil
+
+script.
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });

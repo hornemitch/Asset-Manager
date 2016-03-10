@@ -1,0 +1,13 @@
+.template-body
+   .row
+      h1.pageHeadings Machine Monthlies
+   .row
+      h2.assetName(data-toggle='tooltip' title='Machinery Serial Number') #{serialNumber}
+   .row
+      a.table-back-button-2(href='{{pathFor "machinery"}}' data-toggle="tooltip" title="Back to Machinery")
+         i.fa.fa-arrow-left
+      a.table-add-button-2(href='{{pathFor "machine.month.add"}}' data-toggle="tooltip" title="Add Machinery monthly")
+         i.fa.fa-plus
+   .row
+      .col-md-10.col-md-offset-1
+         |   {{> tabular table=TabularTables.MachineMonthly selector=selector class="table-bordered"}}

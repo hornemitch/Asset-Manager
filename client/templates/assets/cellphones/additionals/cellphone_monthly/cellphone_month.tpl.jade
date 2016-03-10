@@ -1,0 +1,29 @@
+.template-body
+    .row
+        h1.pageHeadings Cell Phone Monthly
+    .row
+        h2.assetName(data-toggle='tooltip' title='Cellphone Number') #{cellNumber number}
+
+    .row
+        a.table-back-button-2(href='{{pathFor "cellphones"}}' data-toggle="tooltip" title="Back to Cellphones")
+            i.fa.fa-arrow-left
+
+        if isSubscriptionCell
+            a.table-add-button-2(href='{{pathFor "cellphone.monthly.sub.add"}}' data-toggle="tooltip" title="Add Cellphone monthly")
+                i.fa.fa-plus
+        else
+            a.table-add-button-2(href='{{pathFor "cellphone.monthly.noSub.add"}}' data-toggle="tooltip" title="Add Cellphone monthly")
+                i.fa.fa-plus
+
+    .row
+        if isSubscriptionCell
+            .col-md-10.col-md-offset-1
+                |   {{> tabular table=TabularTables.CellphoneMonths selector=selector class="table-bordered"}}
+        else
+            .col-md-10.col-md-offset-1
+                |   {{> tabular table=TabularTables.CellphoneMonthsNoSub selector=selector class="table-bordered"}}
+
+script.
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });

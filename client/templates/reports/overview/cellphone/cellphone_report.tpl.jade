@@ -1,0 +1,67 @@
+.template-body
+    .row
+        h1.pageHeadings Cell Phone Overview Report
+    .row
+        table.table-bordered.report-table
+            tr
+                th.report-center Asset Number
+                th.report-center Number
+                th.report-center User
+                th.report-center Status
+                th.report-center Manufacturer
+                th.report-center Model
+                th.report-center PurchaseDate
+                th.report-center Purchase Price
+            each cellphones
+                tr
+                    td
+                        p.tableTitles #{assetNumber}
+                    td
+                        p.tableTitles #{cellNumber number}
+                    td
+                        p.tableTitles #{user}
+                    td
+                        p.tableTitles #{status}
+                    td
+                        p.tableTitles #{manufacturer}
+                    td
+                        p.tableTitles #{model}
+                    td
+                        p.tableTitles #{purchaseDate}
+                    td
+                        p.currency R
+                        p.amount #{showValue costPrice}
+            tr
+                td
+                    b
+                        p.report-center Totals
+                td
+                    b
+                        p.report-center #{cellphoneCount} Cellphones
+                td
+                    p.report-center -
+                td
+                    p.report-center -
+                td
+                    p.report-center -
+                td
+                    p.report-center -
+                td
+                    p.report-center -
+                td
+                    b
+                        p.currency R
+                    b
+                        p.amount #{showValue cellphoneCost}
+    .row
+        a.detailIcons.backButton(href='{{pathFor "reports"}}')
+            i.fa.fa-arrow-left(data-toggle='tooltip' title='Back to Reports')
+        a.detailIcons.positiveIcon(href='{{pathFor "cellphone_report_csv"}}')
+            i.fa.fa-file-excel-o(data-toggle='tooltip' title='Convert to Excel')
+        a.detailIcons.goodIcon(href='{{pathFor "cellphoneReportPrint"}}')
+            i.fa.fa-print(data-toggle='tooltip' title='Print')
+
+script.
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });

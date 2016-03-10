@@ -1,0 +1,32 @@
+.template-body
+   .row
+      h1.pageHeadings Add Improvements
+   form.improvement-form.input-form
+      .row
+         h2.assetName(data-toggle='tooltip' title='Building Name') #{buildingName}
+      .row
+         .col-md-3.col-md-offset-1
+            h2.inputHeadings Improvement Value
+         .col-md-3
+            h2.inputHeadings Date Of Revalue
+         .col-md-4
+            h2.inputHeadings Description
+      .row
+         .col-md-3.col-md-offset-1
+            input.inputFields(type="number" autocomplete="off" name="improvementsValue" step='0.01' placeholder='Enter Value Of Improvement')
+         .col-md-3
+            input.inputFields.point#datepicker(type="text" autocomplete="off" name="improvementsDateOfRevalue")
+         .col-md-4
+            textarea.inputFields( autocomplete="off" name="improvementsDescription" rows='3' placeholder='Describe The Improvement Made' required)
+
+      .row.button-row
+         hr
+         a.backButton(href='{{pathFor "building.improve"}}' data-toggle="tooltip" title="Back to Improvements")
+            i.fa.fa-arrow-left
+         button.saveButton(type='submit' data-toggle="tooltip" title="Save Improvement")
+            i.fa.fa-floppy-o
+
+script.
+   $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+   });

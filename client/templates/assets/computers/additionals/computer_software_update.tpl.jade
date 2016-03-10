@@ -1,0 +1,95 @@
+.template-body
+   .row
+      h1.pageHeadings Update Computer Software
+   form.computer-software-form.input-form
+      .row
+         h2.assetName(data-toggle='tooltip' title='Computer Serial Number') #{serialNumber}
+
+      .row
+         .col-md-3
+            h2.inputHeadings Status
+         .col-md-3
+            h2.inputHeadings Name
+         .col-md-3
+            h2.inputHeadings Invoice Number
+         .col-md-3
+            h2.inputHeadings Purchase Order Number
+      .row
+         .col-md-3
+            select.inputFields.point(name='status')
+               option(value='Newly Acquired' selected='{{isCurrentState "Newly Acquired"}}') Newly Acquired
+               option(value='Currently In Use' selected='{{isCurrentState "Currently In Use"}}') Currently In Use
+               option(value='Not In Use' selected='{{isCurrentState "Not In Use"}}') Not In Use
+         .col-md-3
+            input.inputFields(type='text' name='name' onClick='this.select();' value='#{name}')
+         .col-md-3
+            input.inputFields(type='text' name='invoiceNumber' onClick='this.select();' value='#{invoiceNumber}')
+         .col-md-3
+            input.inputFields(type='text' name='purchaseOrder' onClick='this.select();' value='#{purchaseOrder}')
+      .row
+         .col-md-3
+            h2.inputHeadings Purchase Cost
+         .col-md-3
+            h2.inputHeadings Useful Life
+         .col-md-3
+            h2.inputHeadings Acquired Date
+         .col-md-3
+            h2.inputHeadings Licence Renewal
+      .row
+         .col-md-3
+            input.inputFields(type='number' name='purchaseCost' step='0.01' onClick='this.select();' value='#{purchaseCost}')
+         .col-md-3
+            input.inputFields(type='number' name='usefulLife' onClick='this.select();' step='1' value='#{usefulLife}')
+         .col-md-3
+            input.inputFields.point#date2(type='text' name='acquiredDate' value='#{acquiredDate}')
+         .col-md-3
+            input.inputFields.point#date1(type='text' name='licenceRenewalDate' value='#{licenceRenewalDate}')
+      .row
+         .col-md-3
+            h2.inputHeadings Supplier
+         .col-md-3
+            h2.inputHeadings Developer
+         .col-md-3
+            h2.inputHeadings Licence Key
+         .col-md-3
+            h2.inputHeadings Installed
+      .row
+         .col-md-3
+            input.inputFields(type='text' name='supplier' onClick='this.select();' value='#{supplier}')
+         .col-md-3
+            input.inputFields(type='text' name='developer' onClick='this.select();' value='#{developer}')
+         .col-md-3
+            input.inputFields(type='text' name='licenceKey' onClick='this.select();' value='#{licenceKey}')
+         .col-md-1
+            if isInstalled
+               a.detailIcons.notInstalled.point
+                  i.fa.fa-check.positiveIcon
+               script.
+                  $(document).ready(function () {
+                     $('[data-toggle="tooltip"]').tooltip();
+                  });
+            else
+               a.detailIcons.installed.point
+                  i.fa.fa-times.badIcon
+               script.
+                  $(document).ready(function () {
+                     $('[data-toggle="tooltip"]').tooltip();
+                  });
+      .row
+         .col-md-3
+            h2.inputHeadings Description
+      .row
+         .col-md-3
+            textarea.inputFields(rows='3' name='description' autocomplete='off' placeholder='Describe the Software') #{description}
+
+      .row.button-row
+         hr
+         a.backButton(href='#' data-toggle="tooltip" title="Back to Software")
+            i.fa.fa-arrow-left
+         button.saveButton(type='input' data-toggle="tooltip" title="Save Computer Software")
+            i.fa.fa-floppy-o
+
+script.
+   $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+   });

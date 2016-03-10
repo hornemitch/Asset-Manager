@@ -1,0 +1,350 @@
+> Building
+//---Auto-generated---//
+    >> Asset number
+    >> Status       -> Starts as 'Newly acquired'
+//---Auto-generated---//
+
+//---Entered on creation---//
+    >> Purchase cost
+    >> Asset picture
+    >> Registration document
+    >> Purchase contract
+    >> Property address
+        >>> Property ID
+        >>> Country
+        >>> Province
+        >>> Postal code
+        >>> City
+        >>> Street and number
+//---Entered on creation---//
+
+//---Entered when option selected---//
+    >> Sold             ->  When sold
+    >> Date sold        ->  When sold
+    >> Sell price       ->  When sold
+    >> Profit loss      ->  When sold
+    >> Destroyed        -> When destroyed
+    >> Date destroyed   -> When destroyed
+    >> Revaluation      -> When revaluated
+        >>> Value
+        >>> Date of revaluation
+        >>> Revaluation certificate
+    >> Improvements     -> When improvements
+        >>> Value
+        >>> Date of addition
+        >>> Description
+    >> Deterioration    -> When deterioration
+        >>> Value
+        >>> Date of deterioration
+        >>> Description
+//---Entered when option selected---//
+
+/**   -   -   -   -   -   -   -   -   **/
+
+> Cellphones
+//---Auto-generated---//
+    >> Asset number
+    >> Status       -> Starts as 'Newly acquired'
+    >> Useful life  -> 2 years
+    >> Depreciation rate
+    >> Depreciation
+    >> Accumulated depreciation
+    >> Book value
+//---Auto-generated---//
+
+//---Entered on creation---//
+    >> Invoice number
+    >> Purchase order number
+    >> Cost price
+    >> Model
+    >> Supplier
+    >> Manufacturer
+    >> Warranty expiration
+    >> Invoice scan
+    >> Asset picture
+    >> Number
+    >> User
+    >> Contract start
+    >> Contract end
+    >> Max data
+    >> PIN
+    >> PUK
+    >> SIM
+//---Entered on creation---//
+
+//---Entered when option selected---//
+    >> Lost stolen      -> When lost/stolen
+    >> Lost stolen date -> When lost/stolen
+    >> Scrapped         -> When scrapped
+    >> Date Scrapped    -> When scrapped
+    >> Scrapped to      -> When scrapped
+    >> Sold             -> When sold
+    >> Date sold        -> When sold
+    >> Sell price       -> When sold
+    >> Profit loss      -> When sold
+    >> Current cost     -> When updating current cost
+    >> Fair value       -> When estimating fair value
+    ->> Monthly         -> When entering cellphone monthly
+        >>> Month
+        >>> Subscription total
+        >>> BIS
+        >>> SMS cost
+        >>> Item_bill
+        >>> Calls cost
+        >>> Data cost
+        >>> MMSNAT
+        >>> SMS_DOM
+        >>> Total
+        >>> Difference
+        >>> Number
+//---Entered when option selected---//
+
+/**   -   -   -   -   -   -   -   -   **/
+
+> Computers
+//---Auto-generated---//
+    >> Asset number
+    >> Status       -> Starts as 'Newly acquired'
+    >> Useful life  -> 3 years
+    >> Depreciation rate
+    >> Depreciation
+    >> Accumulated depreciation
+    >> Book value
+//---Auto-generated---//
+
+//---Entered on creation---//
+    >> Invoice number
+    >> Purchase order number
+    >> Cost price
+    >> Model
+    >> Supplier
+    >> Manufacturer
+    >> Warranty expiration
+    >> Invoice scan
+    >> Asset picture
+    >> Serial number
+    >> User
+//---Entered on creation---//
+
+//---Entered when option selected---//
+    >> Lost stolen      -> When lost/stolen
+    >> Lost stolen date -> When lost/stolen
+    >> Scrapped         -> When scrapped
+    >> Date Scrapped    -> When scrapped
+    >> Scrapped to      -> When scrapped
+    >> Sold             -> When sold
+    >> Date sold        -> When sold
+    >> Sell price       -> When sold
+    >> Profit loss      -> When sold
+    >> Current cost     -> When updating current cost
+    >> Fair value       -> When estimating fair value
+    >> Software         -> When en0tering software
+    //---Auto-generated---//
+        >>> Useful life -> 3 years
+        >>> Status      -> Starts as 'Newly acquired'
+    >> Depreciation rate
+        >>> Depreciation
+        >>> Accumulated depreciation
+        >>> Book value
+    //---Auto-generated---//
+
+    //---Entered on creation---//
+        >>> Name
+        >>> Installed
+        >>> Licence key
+        >>> Licence renewal date
+        >>> Purchase cost
+        >>> Acquired date
+        >>> Supplier
+        >>> Developer
+        >>> Invoice number
+        >>> Purchase order
+    //---Entered on creation---//
+//---Entered when option selected---//
+
+/**   -   -   -   -   -   -   -   -   **/
+
+> Furniture
+//---Auto-generated---//
+    >> Asset number
+    >> Status       -> start with "Newly Acquired"
+    >> Useful life  -> 6 years
+    >> Depreciation rate
+    >> Depreciation
+    >> Accumulated depreciation
+    >> Book value
+//---Auto-generated---//
+
+//---Entered on creation---//
+    >> Invoice number
+    >> Purchase order number
+    >> Cost price
+    >> Model
+    >> Supplier
+    >> Manufacturer
+    >> Warranty expiration
+    >> Invoice scan
+    >> Asset picture
+    >> Office
+    >> User
+    >> Description
+//---Entered on creation---//
+
+//---Entered when option selected---//
+    >> Lost stolen      -> When lost/stolen
+    >> Lost stolen date -> When lost/stolen
+    >> Scrapped         -> When scrapped
+    >> Date Scrapped    -> When scrapped
+    >> Scrapped to      -> When scrapped
+    >> Sold             -> When sold
+    >> Date sold        -> When sold
+    >> Sell price       -> When sold
+    >> Profit loss      -> When sold
+    >> Current cost     -> When updating current cost
+    >> Fair value       -> When estimating fair value
+//---Entered when option selected---//
+
+/**   -   -   -   -   -   -   -   -   **/
+
+> Machinery
+//---Auto-generated---//
+    >> Asset number
+    >> Status       -> start with "Newly Acquired"
+    >> Depreciation
+    >> Accumulated depreciation
+    >> Book value
+//---Auto-generated---//
+
+//---Entered on creation---//
+    >> Invoice number
+    >> Purchase order number
+    >> Cost price
+    >> Model
+    >> Supplier
+    >> Manufacturer
+    >> Warranty expiration
+    >> Category -> Selected from pre-entered categories
+        >>> Type
+        >>> Useful life
+        >>> Depreciation rate
+    >> Invoice scan
+    >> Asset picture
+    >> Serial number
+    >> User
+    >> Description
+//---Entered on creation---//
+
+//---Entered when option selected---//
+    >> Lost stolen      -> When lost/stolen
+    >> Lost stolen date -> When lost/stolen
+    >> Scrapped         -> When scrapped
+    >> Date Scrapped    -> When scrapped
+    >> Scrapped to      -> When scrapped
+    >> Sold             -> When sold
+    >> Date sold        -> When sold
+    >> Sell price       -> When sold
+    >> Profit loss      -> When sold
+    >> Current cost     -> When updating current cost
+    >> Fair value       -> When estimating fair value
+    >> Monthly          -> When entering monthly
+        >>> Month
+        >>> Maintenance
+        >>> Revaluation
+    >> Category         -> When entering a new category
+        >>> Type
+        >>> Useful life
+        >>> Depreciation rate -> Auto generated
+//---Entered when option selected---//
+
+/**   -   -   -   -   -   -   -   -   **/
+
+> Tools
+//---Auto-generated---//
+    >> Asset number
+    >> Status       -> start with "Newly Acquired"
+    >> Depreciation
+    >> Accumulated depreciation
+    >> Book value
+//---Auto-generated---//
+
+//---Entered on creation---//
+    >> Invoice number
+    >> Purchase order number
+    >> Cost price
+    >> Model
+    >> Supplier
+    >> Manufacturer
+    >> Warranty expiration
+    >> Category -> Selected from pre-entered categories
+        >>> Type
+        >>> Useful life
+        >>> Depreciation rate
+    >> Invoice scan
+    >> Asset picture
+    >> Serial number
+    >> Certification number
+    >> Calibration
+    >> Renewal date
+//---Entered on creation---//
+
+//---Entered when option selected---//
+    >> Lost stolen      -> When lost/stolen
+    >> Lost stolen date -> When lost/stolen
+    >> Scrapped         -> When scrapped
+    >> Date Scrapped    -> When scrapped
+    >> Scrapped to      -> When scrapped
+    >> Sold             -> When sold
+    >> Date sold        -> When sold
+    >> Sell price       -> When sold
+    >> Profit loss      -> When sold
+    >> Current cost     -> When updating current cost
+    >> Fair value       -> When estimating fair value
+    >> Book out                 -> When booking out a tool
+        >>> Book out date
+        >>> Book out to
+        >>> Gate release number
+        >>> Book in date
+    >> Categories               -> When entering a new category
+        >>> Type
+        >>> Useful life
+        >>> Depreciation rate -> Auto generated
+//---Entered when option selected---//
+
+/**   -   -   -   -   -   -   -   -   **/
+
+> Vehicles
+//---Auto-generated---//
+    >> Asset number
+    >> Status       -> start with "Newly Acquired"
+    >> Useful life  -> 4 years
+    >> Depreciation rate
+    >> Depreciation
+    >> Accumulated depreciation
+    >> Book value
+//---Auto-generated---//
+
+//---Entered on creation---//
+    >> Invoice number
+    >> Purchase order number
+    >> Cost price
+    >> Model
+    >> Supplier
+    >> Manufacturer
+    >> Warranty expiration
+    >> Invoice scan
+    >> Asset picture
+//---Entered on creation---//
+
+//---Entered when option selected---//
+    >> Lost stolen      -> When lost/stolen
+    >> Lost stolen date -> When lost/stolen
+    >> Scrapped         -> When scrapped
+    >> Date Scrapped    -> When scrapped
+    >> Scrapped to      -> When scrapped
+    >> Sold             -> When sold
+    >> Date sold        -> When sold
+    >> Sell price       -> When sold
+    >> Profit loss      -> When sold
+    >> Current cost     -> When updating current cost
+    >> Fair value       -> When estimating fair value
+//---Entered when option selected---//

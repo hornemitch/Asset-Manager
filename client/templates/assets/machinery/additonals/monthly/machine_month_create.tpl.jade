@@ -1,0 +1,32 @@
+.template-body
+   .row
+   h1.pageHeadings Add Machine Monthly
+   form.machinery-month-form.input-form
+      .row
+         h2.assetName(data-toggle='tooltip' title='Machinery Serial Number') #{serialNumber}
+      .row
+         .col-md-4
+            h2.inputHeadings Month
+         .col-md-4
+            h2.inputHeadings Maintenance Cost
+         .col-md-4
+            h2.inputHeadings Revaluation Value
+      .row
+         .col-md-4
+            input.inputFields.point#datepicker(type="text" name="month")
+         .col-md-4
+            input.inputFields(type="number" step='0.01' name="maintenance" placeholder='Enter Maintenance Cost')
+         .col-md-4
+            input.inputFields(type='number' onClick='this.select();' step='0.01' name="revaluation" placeholder="Enter Machine's New Value" value='#{currentCost}')
+
+      .row.button-row
+         hr
+         a.backButton(href='#' data-toggle="tooltip" title="Back to Machine Monthlies")
+            i.fa.fa-arrow-left
+         button.saveButton(type='input' data-toggle="tooltip" title="Save Machine monthly")
+            i.fa.fa-floppy-o
+
+script.
+   $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+   });

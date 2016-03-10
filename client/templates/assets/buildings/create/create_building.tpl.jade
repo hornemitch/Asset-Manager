@@ -1,0 +1,65 @@
+.template-body
+    .row
+        h1.pageHeadings Add Building
+    form.addBuilding.input-form
+        .row
+            .col-md-3
+                h2.inputHeadings Building Name
+            .col-md-3
+                h2.inputHeadings Property ID
+            .col-md-3
+                h2.inputHeadings Purchase Date
+            .col-md-3
+                h2.inputHeadings Purchase Cost
+        .row
+            .col-md-3
+                input.inputFields(type='text' autocomplete='off' name='buildingName' placeholder='Enter Building Name')
+            .col-md-3
+                input.inputFields(type='text' autocomplete='off' name='propertyNumber' placeholder='Enter Property ID')
+            .col-md-3
+                input.inputFields.point#datepicker(type='text' name='purchaseDate')
+            .col-md-3
+                input.inputFields(type='number' autocomplete='off' name='purchaseCost' step='0.01' placeholder='Enter Purchase Cost')
+        .row
+            .col-md-3
+                h2.inputHeadings Location
+            .col-md-3
+                h2.inputHeadings Description
+        .row
+            .col-md-3
+                select.inputFields.point(name='location')
+                    each locations
+                        +location_options
+            .col-md-3
+                textarea.inputFields(name='description' placeholder='Enter a description for the building')
+
+        .row
+            hr
+            if isFactory
+                .col-md-12
+                    a.detailIcons.is-not-factory.point(data-toggle='tooltip' title='Manufacturing Building')
+                        i.fa.fa-industry.goodIcon
+                script.
+                    $(document).ready(function () {
+                        $('[data-toggle="tooltip"]').tooltip();
+                    });
+            else
+                .col-md-12
+                    a.detailIcons.is-factory.point(data-toggle='tooltip' title='Normal Building')
+                        i.fa.fa-building.goodIcon
+                script.
+                    $(document).ready(function () {
+                        $('[data-toggle="tooltip"]').tooltip();
+                    });
+
+        .row.button-row
+            hr
+            a.backButton(href='{{pathFor "buildings"}}' data-toggle="tooltip" title="Back to Buildings")
+                i.fa.fa-arrow-left
+            button.saveButton(type ='submit' href='#' data-toggle="tooltip" title="Save Building")
+                i.fa.fa-floppy-o
+
+script.
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });

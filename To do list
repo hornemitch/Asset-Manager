@@ -1,0 +1,108 @@
+Argent-Deux To Do list:
+
+- Create GUI
+    > Navigation Bar (To be used in all views)
+        >> Links
+            >>> Assets
+                >>>> Cellphones
+                >>>> Computers
+                >>>> Furniture
+                >>>> Plant Machinery
+                >>>> Small Tools
+                >>>> Vehicles
+            >>> Reports
+                >>>> Overview
+                >>>> Cellphones
+                >>>> Computers
+                >>>> Furniture
+                >>>> Plant Machinery
+                >>>> Small Tools
+                >>>> Vehicles
+            >>> Location Management
+            >>> User Management
+            >>> Electronic Manual
+            >>> Bug Reports
+            >>> Login/ Sign Out
+        >> User Identification
+    > Starting Page
+        >> Introduction and greeting
+    > Assets View
+        >> Table Display of Assets
+            >>> Asset Manipulation Buttons
+                >>>> Add
+                    >>>>> Asset Adding View
+                >>>> Edit
+                    >>>>> Asset Editing View
+                >>>> Remove
+                >>>> Lost/ Stolen
+                    >>>>> Lost/Stolen Details View
+                >>>> Sold
+                    >>>>> Sold Details View
+                >>>> Scrapped
+                    >>>>> Scrapped Details View
+                >>>> Add Metadata <<<< If Applicable >>>>
+        >> Table Display of Sold Assets
+        >> Table Display of Scrapped Assets
+        >> Table Display of Lost/Stolen Assets
+    > Reports View
+        >> Table Display of Assets
+            >>> No Data Manipulation
+        >> Reports Available
+    > Location View
+        >> Table Display of Company Locations
+            >>> Location Manipulation Buttons
+                >>>> Add
+                >>>> Edit
+                >>>> Remove
+    > User View
+        >> Table Display of Users
+            >>> User Manipulation Buttons
+                >>>> Add
+                >>>> Edit
+                >>>> Remove
+                >>>> Change/ Recover Password
+    > Manual View
+        >> Manual Contents Links
+            >>> Introduction
+            >>> About Argent-Deux
+            >>> Assets
+            >>> Reports
+            >>> Locations <<< Could include in assets >>>
+            >>> Users
+            >>> Bug Reprots
+    > Bug Report View
+
+- Styling of GUI
+
+- Create Functionality
+    > Assets
+        >> Adding Assets
+        >> Editing Assets
+        >> Removing Assets << Possibly Storing In a History >>
+        >> Updating Asset Status
+        >> Updating Asset Location
+    > Reports
+        >> Logic to formulate reports
+        >> Types of Reports
+            >>> Overview
+            >>> Asset Specific Reports
+            >>> Depreciation
+            >>> Asset Location Reports
+            >>> Asset Information Modification Reports
+            >>> Asset Financial Reports
+    > Locations
+        >> Adding Locations
+        >> Editing Locations
+        >> Removing Locations << Possibly Storing In a History >>
+        >> Forcing Entry of At Least 1 Location
+    > Users
+        >> Adding Users
+            >>> Adding User Permissions
+        >> Editing Users
+        >> Removing Users
+        >> Enforcing User Permissions
+        >> User Authentication
+        >> Limiting Number of User Creations
+    > Bug Reports
+        >> Delivery of Bug Reports
+        >> ? Automation of Error Report Log Delivery ?

@@ -1,0 +1,19 @@
+.template-body
+   .row
+      h1.pageHeadings Impairments
+   .row
+      h2.assetName(data-toggle='tooltip' title='Building Name') #{buildingName}
+
+   .row
+      a.table-back-button-2(href='{{pathFor "buildings"}}' data-toggle="tooltip" title="Back to Buildings")
+         i.fa.fa-arrow-left
+      a.table-add-button-2(href='{{pathFor "building.impair.add"}}' data-toggle="tooltip" title="Add Impairment")
+         i.fa.fa-plus
+   .row
+      .col-md-10.col-md-offset-1
+         |   {{> tabular table=TabularTables.BuildingImpairment selector=selector class="table-bordered"}}
+
+script.
+   $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+   });
