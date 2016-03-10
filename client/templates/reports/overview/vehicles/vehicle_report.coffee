@@ -10,6 +10,28 @@ Template.vehicle_report.onCreated ->
   mainDoc.addClass 'reports'
 
 Template.vehicle_report.helpers
+  'showCostValue': (number) ->
+    number = parseFloat number
+    number = number.toFixed(2)
+    number += ''
+    x = number.split('.')
+    x1 = x[0]
+    x2 = if x.length > 1 then '.' + x[1] else '.00'
+    rgx = /(\d+)(\d{3})/
+    while rgx.test(x1)
+      x1 = x1.replace(rgx, '$1' + ' ' + '$2')
+    return x1 + x2
+
+  'showValue': (number) ->
+    number += ''
+    x = number.split('.')
+    x1 = x[0]
+    x2 = if x.length > 1 then '.' + x[1] else '.00'
+    rgx = /(\d+)(\d{3})/
+    while rgx.test(x1)
+      x1 = x1.replace(rgx, '$1' + ' ' + '$2')
+    return x1 + x2
+
   'vehicles': ->
     Meteor.subscribe 'vehicles'
     return Vehicles.find()
@@ -28,17 +50,8 @@ Template.vehicle_report.helpers
     vehicles.forEach (vehicle) ->
       totalVehicleCost += parseFloat vehicle.costPrice
 
+    totalVehicleCost = totalVehicleCost.toFixed(2)
     return totalVehicleCost
-
-  'showValue': (number) ->
-    number += ''
-    x = number.split('.')
-    x1 = x[0]
-    x2 = if x.length > 1 then '.' + x[1] else '.00'
-    rgx = /(\d+)(\d{3})/
-    while rgx.test(x1)
-      x1 = x1.replace(rgx, '$1' + ' ' + '$2')
-    return x1 + x2
 
   'vehicleCount': ->
     Meteor.subscribe 'vehicles'
@@ -53,7 +66,29 @@ Template.vehicle_report_print.onRendered ->
   Router.go 'vehicleReport'
 
 Template.vehicle_report_print.helpers
-  'computers': ->
+  'showCostValue': (number) ->
+    number = parseFloat number
+    number = number.toFixed(2)
+    number += ''
+    x = number.split('.')
+    x1 = x[0]
+    x2 = if x.length > 1 then '.' + x[1] else '.00'
+    rgx = /(\d+)(\d{3})/
+    while rgx.test(x1)
+      x1 = x1.replace(rgx, '$1' + ' ' + '$2')
+    return x1 + x2
+
+  'showValue': (number) ->
+    number += ''
+    x = number.split('.')
+    x1 = x[0]
+    x2 = if x.length > 1 then '.' + x[1] else '.00'
+    rgx = /(\d+)(\d{3})/
+    while rgx.test(x1)
+      x1 = x1.replace(rgx, '$1' + ' ' + '$2')
+    return x1 + x2
+
+  'vehicles': ->
     Meteor.subscribe 'vehicles'
     return Vehicles.find()
 
@@ -71,17 +106,8 @@ Template.vehicle_report_print.helpers
     vehicles.forEach (vehicle) ->
       totalVehicleCost += parseFloat vehicle.costPrice
 
+    totalVehicleCost = totalVehicleCost.toFixed(2)
     return totalVehicleCost
-
-  'showValue': (number) ->
-    number += ''
-    x = number.split('.')
-    x1 = x[0]
-    x2 = if x.length > 1 then '.' + x[1] else '.00'
-    rgx = /(\d+)(\d{3})/
-    while rgx.test(x1)
-      x1 = x1.replace(rgx, '$1' + ' ' + '$2')
-    return x1 + x2
 
   'vehicleCount': ->
     Meteor.subscribe 'vehicles'

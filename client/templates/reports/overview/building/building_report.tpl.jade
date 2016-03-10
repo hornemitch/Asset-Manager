@@ -2,7 +2,7 @@
     .row
         h1.pageHeadings Building Overview Report
     .row
-        table.table-bordered.report-table.col-md-10.col-md-offset-1
+        table.table-bordered.report-table
             tr
                 th.report-center Asset Number
                 th.report-center Building Name
@@ -22,10 +22,10 @@
                         p.report-center #{purchaseDate}
                     td
                         p.currency R
-                        p.amount #{showValue purchaseCost}
+                        p.amount #{showCostValue purchaseCost}
                     td
                         p.currency R
-                        p.amount #{showValue currentValue}
+                        p.amount #{showCostValue currentValue}
             tr
                 td
                     b

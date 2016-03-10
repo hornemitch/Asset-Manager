@@ -10,6 +10,18 @@ Template.overview_cost.onCreated ->
   mainDoc.addClass 'reports'
 
 Template.overview_cost.helpers
+  'showCostValue': (number) ->
+    number = parseFloat number
+    number = number.toFixed(2)
+    number += ''
+    x = number.split('.')
+    x1 = x[0]
+    x2 = if x.length > 1 then '.' + x[1] else '.00'
+    rgx = /(\d+)(\d{3})/
+    while rgx.test(x1)
+      x1 = x1.replace(rgx, '$1' + ' ' + '$2')
+    return x1 + x2
+
   'showValue': (number) ->
     number += ''
     x = number.split('.')
@@ -536,6 +548,7 @@ Template.overview_cost.helpers
     return total
 
   'totalValue': ->
+    buildings = parseFloat Session.get 'buildingBookValue'
     cellphones= parseFloat Session.get 'cellphoneBookValue'
     computers = parseFloat Session.get 'computerBookValue'
     furniture = parseFloat Session.get 'furnitureBookValue'
@@ -543,7 +556,7 @@ Template.overview_cost.helpers
     tools     = parseFloat Session.get 'toolBookValue'
     vehicles  = parseFloat Session.get 'vehicleBookValue'
 
-    total = cellphones + computers + furniture + machinery + tools + vehicles
+    total = buildings + cellphones + computers + furniture + machinery + tools + vehicles
     total = total.toFixed(2)
     return total
 
@@ -558,6 +571,18 @@ Template.overview_cost_print.onRendered ->
   Router.go 'overviewCostReport'
 
 Template.overview_cost_print.helpers
+  'showCostValue': (number) ->
+    number = parseFloat number
+    number = number.toFixed(2)
+    number += ''
+    x = number.split('.')
+    x1 = x[0]
+    x2 = if x.length > 1 then '.' + x[1] else '.00'
+    rgx = /(\d+)(\d{3})/
+    while rgx.test(x1)
+      x1 = x1.replace(rgx, '$1' + ' ' + '$2')
+    return x1 + x2
+
   'showValue': (number) ->
     number += ''
     x = number.split('.')
@@ -1085,6 +1110,7 @@ Template.overview_cost_print.helpers
     return total
 
   'totalValue': ->
+    buildings = parseFloat Session.get 'buildingBookValue'
     cellphones= parseFloat Session.get 'cellphoneBookValue'
     computers = parseFloat Session.get 'computerBookValue'
     furniture = parseFloat Session.get 'furnitureBookValue'
@@ -1092,6 +1118,6 @@ Template.overview_cost_print.helpers
     tools     = parseFloat Session.get 'toolBookValue'
     vehicles  = parseFloat Session.get 'vehicleBookValue'
 
-    total = cellphones + computers + furniture + machinery + tools + vehicles
+    total = buildings + cellphones + computers + furniture + machinery + tools + vehicles
     total = total.toFixed(2)
     return total

@@ -10,6 +10,28 @@ Template.machinery_report.onCreated ->
   mainDoc.addClass 'reports'
 
 Template.machinery_report.helpers
+  'showCostValue': (number) ->
+    number = parseFloat number
+    number = number.toFixed(2)
+    number += ''
+    x = number.split('.')
+    x1 = x[0]
+    x2 = if x.length > 1 then '.' + x[1] else '.00'
+    rgx = /(\d+)(\d{3})/
+    while rgx.test(x1)
+      x1 = x1.replace(rgx, '$1' + ' ' + '$2')
+    return x1 + x2
+
+  'showValue': (number) ->
+    number += ''
+    x = number.split('.')
+    x1 = x[0]
+    x2 = if x.length > 1 then '.' + x[1] else '.00'
+    rgx = /(\d+)(\d{3})/
+    while rgx.test(x1)
+      x1 = x1.replace(rgx, '$1' + ' ' + '$2')
+    return x1 + x2
+
   'machinery': ->
     Meteor.subscribe 'machinery'
     return Machinery.find()
@@ -28,17 +50,8 @@ Template.machinery_report.helpers
     machinery.forEach (machine) ->
       totalMachineCost += parseFloat machine.costPrice
 
+    totalMachineCost = totalMachineCost.toFixed(2)
     return totalMachineCost
-
-  'showValue': (number) ->
-    number += ''
-    x = number.split('.')
-    x1 = x[0]
-    x2 = if x.length > 1 then '.' + x[1] else '.00'
-    rgx = /(\d+)(\d{3})/
-    while rgx.test(x1)
-      x1 = x1.replace(rgx, '$1' + ' ' + '$2')
-    return x1 + x2
 
   'machineryCount': ->
     Meteor.subscribe 'machinery'
@@ -53,6 +66,28 @@ Template.machinery_report_print.onRendered ->
   Router.go 'machineryReport'
 
 Template.machinery_report_print.helpers
+  'showCostValue': (number) ->
+    number = parseFloat number
+    number = number.toFixed(2)
+    number += ''
+    x = number.split('.')
+    x1 = x[0]
+    x2 = if x.length > 1 then '.' + x[1] else '.00'
+    rgx = /(\d+)(\d{3})/
+    while rgx.test(x1)
+      x1 = x1.replace(rgx, '$1' + ' ' + '$2')
+    return x1 + x2
+
+  'showValue': (number) ->
+    number += ''
+    x = number.split('.')
+    x1 = x[0]
+    x2 = if x.length > 1 then '.' + x[1] else '.00'
+    rgx = /(\d+)(\d{3})/
+    while rgx.test(x1)
+      x1 = x1.replace(rgx, '$1' + ' ' + '$2')
+    return x1 + x2
+
   'machinery': ->
     Meteor.subscribe 'machinery'
     return Machinery.find()
@@ -71,17 +106,8 @@ Template.machinery_report_print.helpers
     machinery.forEach (machine) ->
       totalMachineCost += parseFloat machine.costPrice
 
+    totalMachineCost = totalMachineCost.toFixed(2)
     return totalMachineCost
-
-  'showValue': (number) ->
-    number += ''
-    x = number.split('.')
-    x1 = x[0]
-    x2 = if x.length > 1 then '.' + x[1] else '.00'
-    rgx = /(\d+)(\d{3})/
-    while rgx.test(x1)
-      x1 = x1.replace(rgx, '$1' + ' ' + '$2')
-    return x1 + x2
 
   'machineryCount': ->
     Meteor.subscribe 'machinery'

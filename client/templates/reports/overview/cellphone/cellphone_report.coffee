@@ -10,6 +10,28 @@ Template.cellphone_report.onCreated ->
   mainDoc.addClass 'reports'
 
 Template.cellphone_report.helpers
+  'showCostValue': (number) ->
+    number = parseFloat number
+    number = number.toFixed(2)
+    number += ''
+    x = number.split('.')
+    x1 = x[0]
+    x2 = if x.length > 1 then '.' + x[1] else '.00'
+    rgx = /(\d+)(\d{3})/
+    while rgx.test(x1)
+      x1 = x1.replace(rgx, '$1' + ' ' + '$2')
+    return x1 + x2
+
+  'showValue': (number) ->
+    number += ''
+    x = number.split('.')
+    x1 = x[0]
+    x2 = if x.length > 1 then '.' + x[1] else '.00'
+    rgx = /(\d+)(\d{3})/
+    while rgx.test(x1)
+      x1 = x1.replace(rgx, '$1' + ' ' + '$2')
+    return x1 + x2
+
   'cellphones': ->
     Meteor.subscribe 'cellphones'
     return Cellphones.find()
@@ -26,17 +48,8 @@ Template.cellphone_report.helpers
     cellphones.forEach (cellphone) ->
       totalCellphoneCost += parseFloat cellphone.costPrice
 
+    totalCellphoneCost = totalCellphoneCost.toFixed(2)
     return totalCellphoneCost
-
-  'showValue': (number) ->
-    number += ''
-    x = number.split('.')
-    x1 = x[0]
-    x2 = if x.length > 1 then '.' + x[1] else '.00'
-    rgx = /(\d+)(\d{3})/
-    while rgx.test(x1)
-      x1 = x1.replace(rgx, '$1' + ' ' + '$2')
-    return x1 + x2
 
   'cellphoneCount': ->
     Meteor.subscribe 'cellphones'
@@ -51,6 +64,28 @@ Template.cellphone_report_print.onRendered ->
   Router.go 'cellphoneReport'
 
 Template.cellphone_report_print.helpers
+  'showCostValue': (number) ->
+    number = parseFloat number
+    number = number.toFixed(2)
+    number += ''
+    x = number.split('.')
+    x1 = x[0]
+    x2 = if x.length > 1 then '.' + x[1] else '.00'
+    rgx = /(\d+)(\d{3})/
+    while rgx.test(x1)
+      x1 = x1.replace(rgx, '$1' + ' ' + '$2')
+    return x1 + x2
+
+  'showValue': (number) ->
+    number += ''
+    x = number.split('.')
+    x1 = x[0]
+    x2 = if x.length > 1 then '.' + x[1] else '.00'
+    rgx = /(\d+)(\d{3})/
+    while rgx.test(x1)
+      x1 = x1.replace(rgx, '$1' + ' ' + '$2')
+    return x1 + x2
+
   'cellphones': ->
     Meteor.subscribe 'cellphones'
     return Cellphones.find()
@@ -67,17 +102,8 @@ Template.cellphone_report_print.helpers
     cellphones.forEach (cellphone) ->
       totalCellphoneCost += parseFloat cellphone.costPrice
 
+    totalCellphoneCost = totalCellphoneCost.toFixed(2)
     return totalCellphoneCost
-
-  'showValue': (number) ->
-    number += ''
-    x = number.split('.')
-    x1 = x[0]
-    x2 = if x.length > 1 then '.' + x[1] else '.00'
-    rgx = /(\d+)(\d{3})/
-    while rgx.test(x1)
-      x1 = x1.replace(rgx, '$1' + ' ' + '$2')
-    return x1 + x2
 
   'cellphoneCount': ->
     Meteor.subscribe 'cellphones'
