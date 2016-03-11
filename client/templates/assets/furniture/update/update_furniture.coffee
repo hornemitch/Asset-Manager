@@ -83,13 +83,9 @@ Template.update_furniture.helpers
     buildingSite : furnitureSite
     }
 
-  'usefulLife': ->
-    return 100/@depreciationRate
-
 Template.update_furniture.events
   'submit .furniture-edit-form' : (event) ->
     event.preventDefault()
-    usefulLife          = event.target.usefulLife.value
     invoiceNumber       = event.target.invoiceNumber.value
     purchaseOrderNumber = event.target.purchaseOrderNumber.value
     costPrice           = event.target.costPrice.value
@@ -104,7 +100,7 @@ Template.update_furniture.events
     locationSelect      = event.target.locationSelect.value
     description         = event.target.description.value
 
-    Meteor.call 'editFurniture' , @_id, usefulLife, invoiceNumber, purchaseOrderNumber, costPrice, purchaseDate, model, supplier, manufacturer, warrantyExpiration, office, furnUser, compStatus, locationSelect, description
+    Meteor.call 'editFurniture' , @_id, invoiceNumber, purchaseOrderNumber, costPrice, purchaseDate, model, supplier, manufacturer, warrantyExpiration, office, furnUser, compStatus, locationSelect, description
     Router.go 'furniture'
 
 Template.location_furniture_option.helpers

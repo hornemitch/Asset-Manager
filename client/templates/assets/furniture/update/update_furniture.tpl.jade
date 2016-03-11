@@ -26,22 +26,24 @@
                 input.inputFields(type='number' autocomplete='off' name='costPrice' step='0.01' value='#{costPrice}' onclick='this.select()' required)
         .row
             .col-md-3
-                h2.inputHeadings usefulLife
-            .col-md-3
                 h2.inputHeadings Supplier
             .col-md-3
                 h2.inputHeadings Manufacturer
             .col-md-3
                 h2.inputHeadings Model
-        .row
             .col-md-3
-                input.inputFields(type='number' step='1' name='usefulLife' value='#{usefulLife}'  onClick='this.select()' required)
+                h2.inputHeadings Location
+        .row
             .col-md-3
                 input.inputFields(type='text' autocomplete='off' name='supplier' value='#{supplier}' onclick='this.select()' required)
             .col-md-3
                 input.inputFields(type='text' autocomplete='off' name='manufacturer' value='#{manufacturer}' onclick='this.select()' required)
             .col-md-3
                 input.inputFields(type='text' autocomplete='off' name='model' value='#{model}' onclick='this.select()' required)
+            .col-md-3
+                select.inputFields.point(name='locationSelect')
+                    each locations.places
+                        +location_furniture_option
         .row
             .col-md-3
                 h2.inputHeadings Purchase Date
@@ -62,14 +64,8 @@
                 input.inputFields(type='text' autocomplete='off' name='office' value='#{office}' onclick='this.select()' required)
         .row
             .col-md-3
-                h2.inputHeadings Location
-            .col-md-3
                 h2.inputHeadings Description
         .row
-            .col-md-3
-                select.inputFields.point(name='locationSelect')
-                    each locations.places
-                        +location_furniture_option
             .col-md-3
                 textarea.inputFields(name='description' value='#{description}' onclick='this.select()') #{description}
 

@@ -45,5 +45,9 @@ Template.read_cellphone_detail.helpers
 
     totalDepreciation =(@costPrice * (depreciation/100/12 * months))
     bookValue= @costPrice - totalDepreciation
-    bookValue= parseFloat(bookValue).toFixed(2)
-    return bookValue
+
+    if bookValue <= 1
+      return '1.00'
+    else
+      bookValue= parseFloat(bookValue).toFixed(2)
+      return bookValue

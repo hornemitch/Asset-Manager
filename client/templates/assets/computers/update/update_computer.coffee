@@ -81,13 +81,9 @@ Template.update_computer.helpers
     buildingSite : buildSite
     }
 
-  'usefulLife': ->
-    return 100/@depreciationRate
-
 Template.update_computer.events
   'submit .computer-edit-form' : (event) ->
     event.preventDefault()
-    usefulLife          = event.target.usefulLife.value
     invoiceNumber       = event.target.invoiceNumber.value
     purchaseOrderNumber = event.target.purchaseOrderNumber.value
     costPrice           = event.target.costPrice.value
@@ -102,7 +98,7 @@ Template.update_computer.events
     description         = event.target.desc.value
     locate              = event.target.locationSelect.value
 
-    Meteor.call 'editComputer' , @_id, usefulLife, invoiceNumber, purchaseOrderNumber, costPrice, purchaseDate, model, warrantyExpiration, serialNumber, compUser, supplier, manufacturer, locate, compStatus, description
+    Meteor.call 'editComputer' , @_id, invoiceNumber, purchaseOrderNumber, costPrice, purchaseDate, model, warrantyExpiration, serialNumber, compUser, supplier, manufacturer, locate, compStatus, description
     Router.go 'computers'
 
 Template.location_computer_option.helpers

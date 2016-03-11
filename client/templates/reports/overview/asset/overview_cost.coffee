@@ -723,6 +723,7 @@ Template.overview_cost_print.helpers
     cellphoneDepreciation = Session.get 'totalCellDep'
 
     totalBookValue = cellphoneCosts - cellphoneDepreciation
+    totalBookValue = totalBookValue.toFixed(2)
     Session.set('cellphoneBookValue', totalBookValue)
 
     totalBookValue = totalBookValue.toFixed(2)
@@ -792,6 +793,7 @@ Template.overview_cost_print.helpers
     computerDepreciation = Session.get 'totalCompDep'
 
     totalBookValue = computerCosts - computerDepreciation
+    totalBookValue = totalBookValue.toFixed(2)
     Session.set('computerBookValue', totalBookValue)
 
     return totalBookValue
@@ -861,6 +863,7 @@ Template.overview_cost_print.helpers
     furnitureDepreciation = Session.get 'totalFurnDep'
 
     totalBookValue = furnitureCosts - furnitureDepreciation
+    totalBookValue = totalBookValue.tpFixed(2)
     Session.set('furnitureBookValue', totalBookValue)
 
     return totalBookValue
@@ -931,6 +934,7 @@ Template.overview_cost_print.helpers
     machineryDepreciation = Session.get 'totalMachDep'
 
     totalBookValue = machineryCosts - machineryDepreciation
+    totalBookValue = totalBookValue.toFixed(2)
     Session.set('machineryBookValue', totalBookValue)
 
     return totalBookValue
@@ -1001,6 +1005,7 @@ Template.overview_cost_print.helpers
     toolDepreciation = Session.get 'totalToolDep'
 
     totalBookValue = toolCosts - toolDepreciation
+    totalBookValue = totalBookValue.toFixed(2)
     Session.set('toolBookValue', totalBookValue)
 
     return totalBookValue
@@ -1073,6 +1078,7 @@ Template.overview_cost_print.helpers
     vehiclesDepreciation = Session.get 'totalVehicleDep'
 
     totalBookValue = vehiclesCosts - vehiclesDepreciation
+    totalBookValue = totalBookValue.toFixed(2)
     Session.set('vehicleBookValue', totalBookValue)
 
     return totalBookValue

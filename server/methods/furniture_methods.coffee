@@ -27,8 +27,6 @@ Meteor.methods
     Furniture.insert
       assetNumber         : aNum
       status              : "Newly Acquired"
-      usefulLife          : "6 Years"
-      depreciationRate    : 100/6
       invoiceNumber       : invoiceNumber
       purchaseOrderNumber : purchaseOrderNumber
       costPrice           : costPrice
@@ -45,14 +43,11 @@ Meteor.methods
       createdDate         : date
       checkDate           : checkDate
 
-  'editFurniture' : (id, usefulLife, invoiceNumber, purchaseOrderNumber, costPrice, purchaseDate, model, supplier, manufacturer, warrantyExpiration, office, compUser, compStatus, locationSelect ,description)->
+  'editFurniture' : (id, invoiceNumber, purchaseOrderNumber, costPrice, purchaseDate, model, supplier, manufacturer, warrantyExpiration, office, compUser, compStatus, locationSelect ,description)->
 
-    depreciation = 100/usefulLife
 
     Furniture.update id ,
       $set :
-        usefulLife          : usefulLife + ' Years'
-        depreciationRate    : depreciation
         invoiceNumber       : invoiceNumber
         purchaseOrderNumber : purchaseOrderNumber
         costPrice           : costPrice

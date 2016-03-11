@@ -19,7 +19,7 @@ Template.building_useful_life_update.helpers
     return depreciation
 
 Template.building_useful_life_update.events
-  'submit .useful-life-form': (event)->
+  'submit .input-form': (event)->
     event.preventDefault()
 
     life = event.target.lifeValue.value

@@ -44,7 +44,7 @@
             hr
             if isFactory
                 .col-md-12
-                    a.detailIcons.is-not-factory.point(data-toggle='tooltip' title='Manufacturing Building')
+                    a.detailIcons.is-not-factory.point(data-toggle='tooltip' data-trigger='hover' title='Manufacturing Building')
                         i.fa.fa-industry.goodIcon
                 script.
                     $(document).ready(function () {
@@ -52,7 +52,7 @@
                     });
             else
                 .col-md-12
-                    a.detailIcons.is-factory.point(data-toggle='tooltip' title='Normal Building')
+                    a.detailIcons.is-factory.point(data-toggle='tooltip' data-trigger='hover' title='Normal Building')
                         i.fa.fa-building.goodIcon
                 script.
                     $(document).ready(function () {

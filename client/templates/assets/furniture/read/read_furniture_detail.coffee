@@ -22,14 +22,20 @@ Template.read_furniture_detail.helpers
 
     buyDate  = @purchaseDate
     split    = buyDate.split('-')
+
     oldmonth = split[1]
     oldYear  = split[2]
+
     nowdate  = new Date()
     newMonth = nowdate.getMonth() + 1
     newYear  = nowdate.getFullYear()
-    months = (newYear - oldYear)*12 + (newMonth - oldmonth)
 
+    months = (newYear - oldYear)*12 + (newMonth - oldmonth)
     totalDepreciation =(@costPrice * (depreciation/100/12 * months))
     bookValue= @costPrice - totalDepreciation
-    bookValue= parseFloat(bookValue).toFixed(2)
-    return bookValue
+
+    if bookValue <= 1
+      return '1.00'
+    else
+      bookValue= parseFloat(bookValue).toFixed(2)
+      return bookValue
